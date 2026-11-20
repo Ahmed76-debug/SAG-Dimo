@@ -1,0 +1,17 @@
+{
+  "name": "demo-suite-arabic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "معرض نسخ تجريبية كاملة لجميع مشاريع الويب مع CRUD فعّال",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node demo-server.mjs",
+    "setup": "node setup-demo.mjs"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

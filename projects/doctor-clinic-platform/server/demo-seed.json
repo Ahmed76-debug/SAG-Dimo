@@ -1,0 +1,3077 @@
+{
+  "patients": [
+    {
+      "id": "pat_1",
+      "code": "PT-0001",
+      "name": "أحمد محمود عبد الرحمن",
+      "phone": "01020000000",
+      "gender": "male",
+      "birthDate": "1978-04-12",
+      "nationalId": "3198002041000",
+      "bloodType": "A+",
+      "allergies": [
+        "البنسلين"
+      ],
+      "chronic": [
+        "ارتفاع ضغط الدم"
+      ],
+      "address": "المعادي، القاهرة",
+      "job": "مهندس",
+      "emergencyName": "أحد الأقارب",
+      "emergencyPhone": "01140000000",
+      "tags": [
+        "مزمن",
+        "متابعة دورية"
+      ],
+      "createdAt": "2026-09-19"
+    },
+    {
+      "id": "pat_2",
+      "code": "PT-0002",
+      "name": "فاطمة سيد إبراهيم",
+      "phone": "01020137317",
+      "gender": "female",
+      "birthDate": "1989-11-03",
+      "nationalId": "3198103051037",
+      "bloodType": "O+",
+      "allergies": [],
+      "chronic": [
+        "الأنيميا"
+      ],
+      "address": "مدينة نصر، القاهرة",
+      "job": "معلمة",
+      "tags": [
+        "مزمن",
+        "كشف"
+      ],
+      "createdAt": "2026-09-10"
+    },
+    {
+      "id": "pat_3",
+      "code": "PT-0003",
+      "name": "محمد أشرف علي",
+      "phone": "01020274634",
+      "gender": "male",
+      "birthDate": "1994-06-21",
+      "nationalId": "3198204061074",
+      "bloodType": "B+",
+      "allergies": [],
+      "chronic": [],
+      "address": "الزمالك، القاهرة",
+      "insurance": "مصر للتأمين",
+      "job": "محاسب",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-09-01"
+    },
+    {
+      "id": "pat_4",
+      "code": "PT-0004",
+      "name": "مريم حسن الشريف",
+      "phone": "01020411951",
+      "gender": "female",
+      "birthDate": "2001-02-17",
+      "nationalId": "3198305071111",
+      "bloodType": "AB+",
+      "allergies": [
+        "حبوب اللقاح"
+      ],
+      "chronic": [],
+      "address": "سموحة، الإسكندرية",
+      "insurance": "متلايف",
+      "job": "طالبة جامعية",
+      "emergencyName": "أحد الأقارب",
+      "emergencyPhone": "01140273933",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-08-23"
+    },
+    {
+      "id": "pat_5",
+      "code": "PT-0005",
+      "name": "عمر خالد منصور",
+      "phone": "01020549268",
+      "gender": "male",
+      "birthDate": "1965-09-30",
+      "nationalId": "3198406081148",
+      "bloodType": "A-",
+      "allergies": [
+        "الأسبرين"
+      ],
+      "chronic": [
+        "السكري من النوع الثاني",
+        "ارتفاع الكوليسترول"
+      ],
+      "address": "الشيخ زايد، الجيزة",
+      "insurance": "أليانز",
+      "job": "صيدلي",
+      "notes": "يفضل المواعيد الصباحية، يعاني من رهبة الإبر.",
+      "tags": [
+        "مزمن",
+        "متابعة دورية"
+      ],
+      "createdAt": "2026-08-14"
+    },
+    {
+      "id": "pat_6",
+      "code": "PT-0006",
+      "name": "سارة عمرو فؤاد",
+      "phone": "01020686585",
+      "gender": "female",
+      "birthDate": "1992-08-14",
+      "nationalId": "3198507091185",
+      "bloodType": "O-",
+      "allergies": [],
+      "chronic": [],
+      "address": "المهندسين، الجيزة",
+      "job": "ربة منزل",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "pat_7",
+      "code": "PT-0007",
+      "name": "يوسف إبراهيم نصر",
+      "phone": "01020823902",
+      "gender": "male",
+      "birthDate": "2015-03-08",
+      "nationalId": "3198608101222",
+      "bloodType": "B+",
+      "allergies": [],
+      "chronic": [],
+      "address": "المنصورة",
+      "insurance": "شركة النيل",
+      "job": "موظف بنك",
+      "emergencyName": "أحد الأقارب",
+      "emergencyPhone": "01140547866",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-07-27"
+    },
+    {
+      "id": "pat_8",
+      "code": "PT-0008",
+      "name": "نور الهدى مصطفى",
+      "phone": "01020961219",
+      "gender": "female",
+      "birthDate": "1987-12-25",
+      "nationalId": "3198709111259",
+      "bloodType": "O+",
+      "allergies": [],
+      "chronic": [
+        "الغدة الدرقية"
+      ],
+      "address": "طنطا",
+      "job": "مصمم جرافيك",
+      "tags": [
+        "مزمن",
+        "كشف"
+      ],
+      "createdAt": "2026-07-18"
+    },
+    {
+      "id": "pat_9",
+      "code": "PT-0009",
+      "name": "كريم طارق سليم",
+      "phone": "01021098536",
+      "gender": "male",
+      "birthDate": "1983-05-19",
+      "nationalId": "3198810121296",
+      "bloodType": "A+",
+      "allergies": [],
+      "chronic": [],
+      "address": "المعادي، القاهرة",
+      "job": "طالب",
+      "tags": [
+        "جديد",
+        "متابعة دورية"
+      ],
+      "createdAt": "2026-07-09"
+    },
+    {
+      "id": "pat_10",
+      "code": "PT-0010",
+      "name": "هالة عبد العزيز",
+      "phone": "01021235853",
+      "gender": "female",
+      "birthDate": "1971-01-11",
+      "nationalId": "3198911131333",
+      "bloodType": "O+",
+      "allergies": [],
+      "chronic": [
+        "خشونة الركبة"
+      ],
+      "address": "مدينة نصر، القاهرة",
+      "job": "ممرضة",
+      "emergencyName": "أحد الأقارب",
+      "emergencyPhone": "01140821799",
+      "tags": [
+        "مزمن",
+        "كشف"
+      ],
+      "createdAt": "2026-06-30"
+    },
+    {
+      "id": "pat_11",
+      "code": "PT-0011",
+      "name": "مصطفى كامل رشدي",
+      "phone": "01021373170",
+      "gender": "male",
+      "birthDate": "1999-10-02",
+      "nationalId": "3199012141370",
+      "bloodType": "B+",
+      "allergies": [],
+      "chronic": [],
+      "address": "الزمالك، القاهرة",
+      "insurance": "مصر للتأمين",
+      "job": "محامي",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-06-21"
+    },
+    {
+      "id": "pat_12",
+      "code": "PT-0012",
+      "name": "دينا سمير حبيب",
+      "phone": "01021510487",
+      "gender": "female",
+      "birthDate": "1996-07-30",
+      "nationalId": "3199101151407",
+      "bloodType": "AB+",
+      "allergies": [
+        "المكسرات"
+      ],
+      "chronic": [],
+      "address": "سموحة، الإسكندرية",
+      "insurance": "متلايف",
+      "job": "مخرج فني",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-06-12"
+    },
+    {
+      "id": "pat_13",
+      "code": "PT-0013",
+      "name": "عمرو ياسر لطفي",
+      "phone": "01021647804",
+      "gender": "male",
+      "birthDate": "2008-12-09",
+      "nationalId": "3199202161444",
+      "bloodType": "A-",
+      "allergies": [],
+      "chronic": [],
+      "address": "الشيخ زايد، الجيزة",
+      "insurance": "أليانز",
+      "job": "مهندس",
+      "emergencyName": "أحد الأقارب",
+      "emergencyPhone": "01141095732",
+      "tags": [
+        "جديد",
+        "متابعة دورية"
+      ],
+      "createdAt": "2026-06-03"
+    },
+    {
+      "id": "pat_14",
+      "code": "PT-0014",
+      "name": "رنا محمد فتحي",
+      "phone": "01021785121",
+      "gender": "female",
+      "birthDate": "1990-03-23",
+      "nationalId": "3199303171481",
+      "bloodType": "O-",
+      "allergies": [],
+      "chronic": [],
+      "address": "المهندسين، الجيزة",
+      "job": "معلمة",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-05-25"
+    },
+    {
+      "id": "pat_15",
+      "code": "PT-0015",
+      "name": "حسن علي زيدان",
+      "phone": "01021922438",
+      "gender": "male",
+      "birthDate": "1958-06-15",
+      "nationalId": "3199404181518",
+      "bloodType": "B+",
+      "allergies": [
+        "السلفا"
+      ],
+      "chronic": [
+        "قصور القلب",
+        "السكري"
+      ],
+      "address": "المنصورة",
+      "insurance": "شركة النيل",
+      "job": "محاسب",
+      "tags": [
+        "مزمن",
+        "كشف"
+      ],
+      "createdAt": "2026-05-16"
+    },
+    {
+      "id": "pat_16",
+      "code": "PT-0016",
+      "name": "ياسمين هشام عادل",
+      "phone": "01022059755",
+      "gender": "female",
+      "birthDate": "2003-09-05",
+      "nationalId": "3199505191555",
+      "bloodType": "O+",
+      "allergies": [],
+      "chronic": [],
+      "address": "طنطا",
+      "job": "طالبة جامعية",
+      "emergencyName": "أحد الأقارب",
+      "emergencyPhone": "01141369665",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-05-07"
+    },
+    {
+      "id": "pat_17",
+      "code": "PT-0017",
+      "name": "إبراهيم صابر قنديل",
+      "phone": "01022197072",
+      "gender": "male",
+      "birthDate": "1974-02-27",
+      "nationalId": "3199606201592",
+      "bloodType": "A+",
+      "allergies": [],
+      "chronic": [
+        "الربو"
+      ],
+      "address": "المعادي، القاهرة",
+      "job": "صيدلي",
+      "tags": [
+        "مزمن",
+        "متابعة دورية"
+      ],
+      "createdAt": "2026-04-28"
+    },
+    {
+      "id": "pat_18",
+      "code": "PT-0018",
+      "name": "مي وليد شاكر",
+      "phone": "01022334389",
+      "gender": "female",
+      "birthDate": "1985-04-18",
+      "nationalId": "3199707211629",
+      "bloodType": "O+",
+      "allergies": [],
+      "chronic": [],
+      "address": "مدينة نصر، القاهرة",
+      "job": "ربة منزل",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-04-19"
+    },
+    {
+      "id": "pat_19",
+      "code": "PT-0019",
+      "name": "طارق صلاح الدين",
+      "phone": "01022471706",
+      "gender": "male",
+      "birthDate": "1968-11-22",
+      "nationalId": "3199808221666",
+      "bloodType": "B+",
+      "allergies": [],
+      "chronic": [
+        "ارتفاع ضغط الدم"
+      ],
+      "address": "الزمالك، القاهرة",
+      "insurance": "مصر للتأمين",
+      "job": "موظف بنك",
+      "emergencyName": "أحد الأقارب",
+      "emergencyPhone": "01141643598",
+      "tags": [
+        "مزمن",
+        "كشف"
+      ],
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "pat_20",
+      "code": "PT-0020",
+      "name": "أمل رشاد عوض",
+      "phone": "01022609023",
+      "gender": "female",
+      "birthDate": "1993-01-14",
+      "nationalId": "3199909231703",
+      "bloodType": "AB+",
+      "allergies": [],
+      "chronic": [],
+      "address": "سموحة، الإسكندرية",
+      "insurance": "متلايف",
+      "job": "مصمم جرافيك",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-04-01"
+    },
+    {
+      "id": "pat_21",
+      "code": "PT-0021",
+      "name": "سيف الدين مجدي",
+      "phone": "01022746340",
+      "gender": "male",
+      "birthDate": "2011-08-03",
+      "nationalId": "3200010241740",
+      "bloodType": "A-",
+      "allergies": [],
+      "chronic": [],
+      "address": "الشيخ زايد، الجيزة",
+      "insurance": "أليانز",
+      "job": "طالب",
+      "tags": [
+        "جديد",
+        "متابعة دورية"
+      ],
+      "createdAt": "2026-03-23"
+    },
+    {
+      "id": "pat_22",
+      "code": "PT-0022",
+      "name": "لينا أيمن غانم",
+      "phone": "01022883657",
+      "gender": "female",
+      "birthDate": "1998-05-27",
+      "nationalId": "3200111251777",
+      "bloodType": "O-",
+      "allergies": [
+        "اللاتكس"
+      ],
+      "chronic": [],
+      "address": "المهندسين، الجيزة",
+      "job": "ممرضة",
+      "emergencyName": "أحد الأقارب",
+      "emergencyPhone": "01141917531",
+      "tags": [
+        "جديد",
+        "كشف"
+      ],
+      "createdAt": "2026-03-14"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt_t1",
+      "patientId": "pat_1",
+      "date": "2026-11-18",
+      "time": "09:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 400,
+      "source": "online",
+      "complaint": "متابعة نتائج التحاليل",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t2",
+      "patientId": "pat_2",
+      "date": "2026-11-18",
+      "time": "09:30",
+      "duration": 30,
+      "type": "followup",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "ألم بالصدر عند المجهود",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t3",
+      "patientId": "pat_3",
+      "date": "2026-11-18",
+      "time": "10:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "كحة مستمرة منذ أسبوع",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t4",
+      "patientId": "pat_4",
+      "date": "2026-11-18",
+      "time": "10:30",
+      "duration": 30,
+      "type": "followup",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 400,
+      "source": "clinic",
+      "complaint": "متابعة ضغط الدم",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t5",
+      "patientId": "pat_5",
+      "date": "2026-11-18",
+      "time": "11:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "waiting",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "دوخة وتنميل بالأطراف",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t6",
+      "patientId": "pat_6",
+      "date": "2026-11-18",
+      "time": "11:30",
+      "duration": 30,
+      "type": "procedure",
+      "status": "waiting",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "غيار جرح بسيط",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t7",
+      "patientId": "pat_7",
+      "date": "2026-11-18",
+      "time": "12:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 400,
+      "source": "clinic",
+      "complaint": "صداع نصفي متكرر",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t8",
+      "patientId": "pat_8",
+      "date": "2026-11-18",
+      "time": "16:00",
+      "duration": 30,
+      "type": "telemedicine",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "استشارة عن بُعد لنتائج الأشعة",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t9",
+      "patientId": "pat_9",
+      "date": "2026-11-18",
+      "time": "16:30",
+      "duration": 30,
+      "type": "followup",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "متابعة سكر",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_t10",
+      "patientId": "pat_10",
+      "date": "2026-11-18",
+      "time": "17:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 400,
+      "source": "clinic",
+      "complaint": "فحص دوري شامل",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_f1_0",
+      "patientId": "pat_4",
+      "date": "2026-11-19",
+      "time": "09:00",
+      "duration": 30,
+      "type": "followup",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "ألم بالصدر عند المجهود",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f1_1",
+      "patientId": "pat_5",
+      "date": "2026-11-19",
+      "time": "11:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "كحة مستمرة منذ أسبوع",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f1_2",
+      "patientId": "pat_6",
+      "date": "2026-11-19",
+      "time": "13:00",
+      "duration": 30,
+      "type": "followup",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "متابعة ضغط الدم",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f1_3",
+      "patientId": "pat_7",
+      "date": "2026-11-19",
+      "time": "15:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "دوخة وتنميل بالأطراف",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f2_0",
+      "patientId": "pat_7",
+      "date": "2026-11-20",
+      "time": "09:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "كحة مستمرة منذ أسبوع",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f2_1",
+      "patientId": "pat_8",
+      "date": "2026-11-20",
+      "time": "11:00",
+      "duration": 30,
+      "type": "followup",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "متابعة ضغط الدم",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f2_2",
+      "patientId": "pat_9",
+      "date": "2026-11-20",
+      "time": "13:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "دوخة وتنميل بالأطراف",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f2_3",
+      "patientId": "pat_10",
+      "date": "2026-11-20",
+      "time": "15:00",
+      "duration": 30,
+      "type": "procedure",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "غيار جرح بسيط",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f2_4",
+      "patientId": "pat_11",
+      "date": "2026-11-20",
+      "time": "17:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "صداع نصفي متكرر",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f3_0",
+      "patientId": "pat_10",
+      "date": "2026-11-21",
+      "time": "09:00",
+      "duration": 30,
+      "type": "followup",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "متابعة ضغط الدم",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f3_1",
+      "patientId": "pat_11",
+      "date": "2026-11-21",
+      "time": "11:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "دوخة وتنميل بالأطراف",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f3_2",
+      "patientId": "pat_12",
+      "date": "2026-11-21",
+      "time": "13:00",
+      "duration": 30,
+      "type": "procedure",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "غيار جرح بسيط",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f4_0",
+      "patientId": "pat_13",
+      "date": "2026-11-22",
+      "time": "09:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "دوخة وتنميل بالأطراف",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f4_1",
+      "patientId": "pat_14",
+      "date": "2026-11-22",
+      "time": "11:00",
+      "duration": 30,
+      "type": "procedure",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "غيار جرح بسيط",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f4_2",
+      "patientId": "pat_15",
+      "date": "2026-11-22",
+      "time": "13:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "صداع نصفي متكرر",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f4_3",
+      "patientId": "pat_16",
+      "date": "2026-11-22",
+      "time": "15:00",
+      "duration": 30,
+      "type": "telemedicine",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "استشارة عن بُعد لنتائج الأشعة",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f5_0",
+      "patientId": "pat_16",
+      "date": "2026-11-23",
+      "time": "09:00",
+      "duration": 30,
+      "type": "procedure",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "غيار جرح بسيط",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f5_1",
+      "patientId": "pat_17",
+      "date": "2026-11-23",
+      "time": "11:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "صداع نصفي متكرر",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f5_2",
+      "patientId": "pat_18",
+      "date": "2026-11-23",
+      "time": "13:00",
+      "duration": 30,
+      "type": "telemedicine",
+      "status": "confirmed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "استشارة عن بُعد لنتائج الأشعة",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f5_3",
+      "patientId": "pat_19",
+      "date": "2026-11-23",
+      "time": "15:00",
+      "duration": 30,
+      "type": "followup",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 2",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "متابعة سكر",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_f5_4",
+      "patientId": "pat_20",
+      "date": "2026-11-23",
+      "time": "17:00",
+      "duration": 30,
+      "type": "consultation",
+      "status": "scheduled",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "فحص دوري شامل",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "apt_p1",
+      "patientId": "pat_2",
+      "date": "2026-11-17",
+      "time": "10:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "ألم بالصدر عند المجهود",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "apt_p2",
+      "patientId": "pat_3",
+      "date": "2026-11-16",
+      "time": "11:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "كحة مستمرة منذ أسبوع",
+      "createdAt": "2026-11-14"
+    },
+    {
+      "id": "apt_p3",
+      "patientId": "pat_4",
+      "date": "2026-11-15",
+      "time": "12:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "متابعة ضغط الدم",
+      "createdAt": "2026-11-13"
+    },
+    {
+      "id": "apt_p4",
+      "patientId": "pat_5",
+      "date": "2026-11-14",
+      "time": "13:30",
+      "duration": 30,
+      "type": "followup",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "دوخة وتنميل بالأطراف",
+      "createdAt": "2026-11-12"
+    },
+    {
+      "id": "apt_p5",
+      "patientId": "pat_6",
+      "date": "2026-11-13",
+      "time": "14:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "غيار جرح بسيط",
+      "createdAt": "2026-11-11"
+    },
+    {
+      "id": "apt_p6",
+      "patientId": "pat_7",
+      "date": "2026-11-12",
+      "time": "15:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "صداع نصفي متكرر",
+      "createdAt": "2026-11-10"
+    },
+    {
+      "id": "apt_p7",
+      "patientId": "pat_8",
+      "date": "2026-11-11",
+      "time": "16:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "استشارة عن بُعد لنتائج الأشعة",
+      "createdAt": "2026-11-09"
+    },
+    {
+      "id": "apt_p8",
+      "patientId": "pat_9",
+      "date": "2026-11-10",
+      "time": "09:30",
+      "duration": 30,
+      "type": "followup",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "متابعة سكر",
+      "createdAt": "2026-11-08"
+    },
+    {
+      "id": "apt_p9",
+      "patientId": "pat_10",
+      "date": "2026-11-09",
+      "time": "10:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "no-show",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "فحص دوري شامل",
+      "createdAt": "2026-11-07"
+    },
+    {
+      "id": "apt_p10",
+      "patientId": "pat_11",
+      "date": "2026-11-08",
+      "time": "11:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "متابعة نتائج التحاليل",
+      "createdAt": "2026-11-06"
+    },
+    {
+      "id": "apt_p11",
+      "patientId": "pat_12",
+      "date": "2026-11-07",
+      "time": "12:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "ألم بالصدر عند المجهود",
+      "createdAt": "2026-11-05"
+    },
+    {
+      "id": "apt_p12",
+      "patientId": "pat_13",
+      "date": "2026-11-06",
+      "time": "13:30",
+      "duration": 30,
+      "type": "followup",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "كحة مستمرة منذ أسبوع",
+      "createdAt": "2026-11-04"
+    },
+    {
+      "id": "apt_p13",
+      "patientId": "pat_14",
+      "date": "2026-11-05",
+      "time": "14:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "متابعة ضغط الدم",
+      "createdAt": "2026-11-03"
+    },
+    {
+      "id": "apt_p14",
+      "patientId": "pat_15",
+      "date": "2026-11-04",
+      "time": "15:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "دوخة وتنميل بالأطراف",
+      "createdAt": "2026-11-02"
+    },
+    {
+      "id": "apt_p15",
+      "patientId": "pat_16",
+      "date": "2026-11-03",
+      "time": "16:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "غيار جرح بسيط",
+      "createdAt": "2026-11-01"
+    },
+    {
+      "id": "apt_p16",
+      "patientId": "pat_17",
+      "date": "2026-11-02",
+      "time": "09:30",
+      "duration": 30,
+      "type": "followup",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "صداع نصفي متكرر",
+      "createdAt": "2026-10-31"
+    },
+    {
+      "id": "apt_p17",
+      "patientId": "pat_18",
+      "date": "2026-11-01",
+      "time": "10:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "completed",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "clinic",
+      "complaint": "استشارة عن بُعد لنتائج الأشعة",
+      "createdAt": "2026-10-30"
+    },
+    {
+      "id": "apt_p18",
+      "patientId": "pat_19",
+      "date": "2026-10-31",
+      "time": "11:30",
+      "duration": 30,
+      "type": "consultation",
+      "status": "no-show",
+      "doctorId": "usr_doctor",
+      "room": "غرفة 1",
+      "fee": 300,
+      "source": "online",
+      "complaint": "متابعة سكر",
+      "createdAt": "2026-10-29"
+    }
+  ],
+  "visits": [
+    {
+      "id": "vis_1",
+      "patientId": "pat_1",
+      "date": "2026-11-16",
+      "doctorId": "usr_doctor",
+      "type": "followup",
+      "chiefComplaint": "صداع مزمن منذ أسبوعين مع دوخة عند الوقوف",
+      "history": "لا توجد أمراض مزمنة معروفة سوى ما هو مسجل بالملف. لا يدخن.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "صداع توتري",
+        "نقص فيتامين د"
+      ],
+      "icd": "R50.0",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.6,
+        "bpSys": 110,
+        "bpDia": 70,
+        "pulse": 68,
+        "weight": 58,
+        "height": 158,
+        "spo2": 96,
+        "glucose": 90
+      },
+      "followUpDate": "2026-11-30",
+      "attachments": [
+        {
+          "name": "تحاليل دم شاملة.pdf",
+          "kind": "lab"
+        }
+      ],
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "vis_2",
+      "patientId": "pat_2",
+      "date": "2026-11-12",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "ألم في الصدر مع ضيق تنفس عند المجهود",
+      "history": "تاريخ مرضي بسيط، يتابع دوريًا بالعيادة.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "التهاب شعبي حاد"
+      ],
+      "icd": "R51.1",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.75,
+        "bpSys": 116,
+        "bpDia": 74,
+        "pulse": 71,
+        "weight": 63.5,
+        "height": 162,
+        "spo2": 97,
+        "glucose": 98
+      },
+      "followUpDate": "2026-11-26",
+      "attachments": [],
+      "createdAt": "2026-11-12"
+    },
+    {
+      "id": "vis_3",
+      "patientId": "pat_3",
+      "date": "2026-11-08",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "ألم أسفل الظهر يمتد للطرف السفلي",
+      "history": "لا توجد أمراض مزمنة معروفة سوى ما هو مسجل بالملف. لا يدخن.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "ارتفاع ضغط الدم غير المنضبط"
+      ],
+      "icd": "R52.2",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.9,
+        "bpSys": 122,
+        "bpDia": 78,
+        "pulse": 74,
+        "weight": 69,
+        "height": 166,
+        "spo2": 98,
+        "glucose": 106
+      },
+      "notes": "تم شرح خطة العلاج للمريض وتوقيع الإقرار.",
+      "followUpDate": "2026-11-22",
+      "attachments": [],
+      "createdAt": "2026-11-08"
+    },
+    {
+      "id": "vis_4",
+      "patientId": "pat_4",
+      "date": "2026-11-04",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "ارتفاع مستمر في قراءات السكر الصباحية",
+      "history": "تاريخ مرضي بسيط، يتابع دوريًا بالعيادة.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "بدأ سكري من النوع الثاني"
+      ],
+      "icd": "R53.3",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 37.050000000000004,
+        "bpSys": 128,
+        "bpDia": 82,
+        "pulse": 77,
+        "weight": 74.5,
+        "height": 170,
+        "spo2": 96,
+        "glucose": 114
+      },
+      "followUpDate": "2026-11-18",
+      "attachments": [
+        {
+          "name": "تحاليل دم شاملة.pdf",
+          "kind": "lab"
+        }
+      ],
+      "createdAt": "2026-11-04"
+    },
+    {
+      "id": "vis_5",
+      "patientId": "pat_5",
+      "date": "2026-10-31",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "رشح وحرارة وكحة جافة منذ 5 أيام",
+      "history": "لا توجد أمراض مزمنة معروفة سوى ما هو مسجل بالملف. لا يدخن.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "التهاب المعدة المزمن",
+        "جرثومة المعدة"
+      ],
+      "icd": "R54.4",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 37.2,
+        "bpSys": 134,
+        "bpDia": 70,
+        "pulse": 80,
+        "weight": 80,
+        "height": 174,
+        "spo2": 97,
+        "glucose": 122
+      },
+      "followUpDate": "2026-11-14",
+      "attachments": [],
+      "createdAt": "2026-10-31"
+    },
+    {
+      "id": "vis_6",
+      "patientId": "pat_6",
+      "date": "2026-10-27",
+      "doctorId": "usr_doctor",
+      "type": "followup",
+      "chiefComplaint": "متابعة نتائج التحاليل الشهرية",
+      "history": "تاريخ مرضي بسيط، يتابع دوريًا بالعيادة.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "انزلاق غضروفي قطني مبكر"
+      ],
+      "icd": "R55.5",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 37.35,
+        "bpSys": 110,
+        "bpDia": 74,
+        "pulse": 83,
+        "weight": 85.5,
+        "height": 178,
+        "spo2": 98,
+        "glucose": 130
+      },
+      "followUpDate": "2026-11-10",
+      "attachments": [],
+      "createdAt": "2026-10-27"
+    },
+    {
+      "id": "vis_7",
+      "patientId": "pat_7",
+      "date": "2026-10-23",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "تورم واحمرار في مفصل الركبة اليمنى",
+      "history": "لا توجد أمراض مزمنة معروفة سوى ما هو مسجل بالملف. لا يدخن.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "التهاب المفصل الروماتويدي"
+      ],
+      "icd": "R56.6",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.6,
+        "bpSys": 116,
+        "bpDia": 78,
+        "pulse": 86,
+        "weight": 91,
+        "height": 158,
+        "spo2": 96,
+        "glucose": 90
+      },
+      "followUpDate": "2026-11-06",
+      "attachments": [
+        {
+          "name": "تحاليل دم شاملة.pdf",
+          "kind": "lab"
+        }
+      ],
+      "createdAt": "2026-10-23"
+    },
+    {
+      "id": "vis_8",
+      "patientId": "pat_8",
+      "date": "2026-10-19",
+      "doctorId": "usr_doctor",
+      "type": "telemedicine",
+      "chiefComplaint": "ألم حارق في المعدة بعد الأكل",
+      "history": "تاريخ مرضي بسيط، يتابع دوريًا بالعيادة.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "أكزيما تأتبية"
+      ],
+      "icd": "R57.7",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.75,
+        "bpSys": 122,
+        "bpDia": 82,
+        "pulse": 68,
+        "weight": 96.5,
+        "height": 162,
+        "spo2": 97,
+        "glucose": 98
+      },
+      "followUpDate": "2026-11-02",
+      "attachments": [],
+      "createdAt": "2026-10-19"
+    },
+    {
+      "id": "vis_9",
+      "patientId": "pat_9",
+      "date": "2026-10-15",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "حكة جلدية منتشرة بالذراعين",
+      "history": "لا توجد أمراض مزمنة معروفة سوى ما هو مسجل بالملف. لا يدخن.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "أنيميا نقص الحديد"
+      ],
+      "icd": "R58.8",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.9,
+        "bpSys": 128,
+        "bpDia": 70,
+        "pulse": 71,
+        "weight": 58,
+        "height": 166,
+        "spo2": 98,
+        "glucose": 106
+      },
+      "followUpDate": "2026-10-29",
+      "attachments": [],
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "vis_10",
+      "patientId": "pat_10",
+      "date": "2026-10-11",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "تعب عام وشحوب مع فقدان وزن غير مبرر",
+      "history": "تاريخ مرضي بسيط، يتابع دوريًا بالعيادة.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "التهاب اللوزتين الحاد"
+      ],
+      "icd": "R50.0",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 37.050000000000004,
+        "bpSys": 134,
+        "bpDia": 74,
+        "pulse": 74,
+        "weight": 63.5,
+        "height": 170,
+        "spo2": 96,
+        "glucose": 114
+      },
+      "followUpDate": "2026-10-25",
+      "attachments": [
+        {
+          "name": "تحاليل دم شاملة.pdf",
+          "kind": "lab"
+        }
+      ],
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "vis_11",
+      "patientId": "pat_11",
+      "date": "2026-10-07",
+      "doctorId": "usr_doctor",
+      "type": "followup",
+      "chiefComplaint": "صداع مزمن منذ أسبوعين مع دوخة عند الوقوف",
+      "history": "لا توجد أمراض مزمنة معروفة سوى ما هو مسجل بالملف. لا يدخن.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "صداع توتري",
+        "نقص فيتامين د"
+      ],
+      "icd": "R51.1",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 37.2,
+        "bpSys": 110,
+        "bpDia": 78,
+        "pulse": 77,
+        "weight": 69,
+        "height": 174,
+        "spo2": 97,
+        "glucose": 122
+      },
+      "followUpDate": "2026-10-21",
+      "attachments": [],
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "vis_12",
+      "patientId": "pat_12",
+      "date": "2026-10-03",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "ألم في الصدر مع ضيق تنفس عند المجهود",
+      "history": "تاريخ مرضي بسيط، يتابع دوريًا بالعيادة.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "التهاب شعبي حاد"
+      ],
+      "icd": "R52.2",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 37.35,
+        "bpSys": 116,
+        "bpDia": 82,
+        "pulse": 80,
+        "weight": 74.5,
+        "height": 178,
+        "spo2": 98,
+        "glucose": 130
+      },
+      "followUpDate": "2026-10-17",
+      "attachments": [],
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "vis_13",
+      "patientId": "pat_13",
+      "date": "2026-09-29",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "ألم أسفل الظهر يمتد للطرف السفلي",
+      "history": "لا توجد أمراض مزمنة معروفة سوى ما هو مسجل بالملف. لا يدخن.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "ارتفاع ضغط الدم غير المنضبط"
+      ],
+      "icd": "R53.3",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.6,
+        "bpSys": 122,
+        "bpDia": 70,
+        "pulse": 83,
+        "weight": 80,
+        "height": 158,
+        "spo2": 96,
+        "glucose": 90
+      },
+      "followUpDate": "2026-10-13",
+      "attachments": [
+        {
+          "name": "تحاليل دم شاملة.pdf",
+          "kind": "lab"
+        }
+      ],
+      "createdAt": "2026-09-29"
+    },
+    {
+      "id": "vis_14",
+      "patientId": "pat_14",
+      "date": "2026-09-25",
+      "doctorId": "usr_doctor",
+      "type": "consultation",
+      "chiefComplaint": "ارتفاع مستمر في قراءات السكر الصباحية",
+      "history": "تاريخ مرضي بسيط، يتابع دوريًا بالعيادة.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "بدأ سكري من النوع الثاني"
+      ],
+      "icd": "R54.4",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.75,
+        "bpSys": 128,
+        "bpDia": 74,
+        "pulse": 86,
+        "weight": 85.5,
+        "height": 162,
+        "spo2": 97,
+        "glucose": 98
+      },
+      "followUpDate": "2026-10-09",
+      "attachments": [],
+      "createdAt": "2026-09-25"
+    },
+    {
+      "id": "vis_15",
+      "patientId": "pat_15",
+      "date": "2026-09-21",
+      "doctorId": "usr_doctor",
+      "type": "telemedicine",
+      "chiefComplaint": "رشح وحرارة وكحة جافة منذ 5 أيام",
+      "history": "لا توجد أمراض مزمنة معروفة سوى ما هو مسجل بالملف. لا يدخن.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "التهاب المعدة المزمن",
+        "جرثومة المعدة"
+      ],
+      "icd": "R55.5",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 36.9,
+        "bpSys": 134,
+        "bpDia": 78,
+        "pulse": 68,
+        "weight": 91,
+        "height": 166,
+        "spo2": 98,
+        "glucose": 106
+      },
+      "followUpDate": "2026-10-05",
+      "attachments": [],
+      "createdAt": "2026-09-21"
+    },
+    {
+      "id": "vis_16",
+      "patientId": "pat_16",
+      "date": "2026-09-17",
+      "doctorId": "usr_doctor",
+      "type": "followup",
+      "chiefComplaint": "متابعة نتائج التحاليل الشهرية",
+      "history": "تاريخ مرضي بسيط، يتابع دوريًا بالعيادة.",
+      "examination": "الوعي كامل، العلامات الحيوية مستقرة، لا يوجد ضيق تنفس حاد. فحص الجهاز المصاب لا يظهر علامات خطورة.",
+      "diagnosis": [
+        "انزلاق غضروفي قطني مبكر"
+      ],
+      "icd": "R56.6",
+      "plan": "بدء العلاج الدوائي، تحاليل دم شاملة، وإعادة التقييم بعد أسبوعين أو عند تدهور الأعراض.",
+      "vitals": {
+        "temp": 37.050000000000004,
+        "bpSys": 110,
+        "bpDia": 82,
+        "pulse": 71,
+        "weight": 96.5,
+        "height": 170,
+        "spo2": 96,
+        "glucose": 114
+      },
+      "followUpDate": "2026-10-01",
+      "attachments": [
+        {
+          "name": "تحاليل دم شاملة.pdf",
+          "kind": "lab"
+        }
+      ],
+      "createdAt": "2026-09-17"
+    }
+  ],
+  "prescriptions": [
+    {
+      "id": "rx_1",
+      "number": "RX-2026-120",
+      "patientId": "pat_1",
+      "visitId": "vis_1",
+      "doctorId": "usr_doctor",
+      "date": "2026-11-16",
+      "diagnosis": "صداع توتري / نقص فيتامين د",
+      "items": [
+        {
+          "name": "باراسيتامول 500 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "كل 8 ساعات",
+          "duration": "5 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91uerz653v"
+        },
+        {
+          "name": "أموكسيسيلين 500 مجم",
+          "form": "كبسولات",
+          "dose": "كبسولة",
+          "frequency": "كل 8 ساعات",
+          "duration": "7 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91uerk1u86",
+          "notes": "بعد الأكل"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "active",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "rx_2",
+      "number": "RX-2026-121",
+      "patientId": "pat_2",
+      "visitId": "vis_2",
+      "doctorId": "usr_doctor",
+      "date": "2026-11-12",
+      "diagnosis": "التهاب شعبي حاد",
+      "items": [
+        {
+          "name": "أوميبرازول 20 مجم",
+          "form": "كبسولات",
+          "dose": "كبسولة",
+          "frequency": "مرة يوميًا قبل الفطار",
+          "duration": "14 يومًا",
+          "route": "فموي",
+          "id": "itm_mwm91uercureu"
+        },
+        {
+          "name": "ميتفورمين 850 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "مرتين يوميًا بعد الأكل",
+          "duration": "شهر",
+          "route": "فموي",
+          "id": "itm_mwm91uerdkx6k"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "active",
+      "createdAt": "2026-11-12"
+    },
+    {
+      "id": "rx_3",
+      "number": "RX-2026-122",
+      "patientId": "pat_3",
+      "visitId": "vis_3",
+      "doctorId": "usr_doctor",
+      "date": "2026-11-08",
+      "diagnosis": "ارتفاع ضغط الدم غير المنضبط",
+      "items": [
+        {
+          "name": "أموكسيسيلين 500 مجم",
+          "form": "كبسولات",
+          "dose": "كبسولة",
+          "frequency": "كل 8 ساعات",
+          "duration": "7 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91uer0up5v"
+        },
+        {
+          "name": "فيتامين د 50000 وحدة",
+          "form": "أمبولات",
+          "dose": "أمبول",
+          "frequency": "مرة أسبوعيًا",
+          "duration": "8 أسابيع",
+          "route": "فموي",
+          "id": "itm_mwm91uerz3zoj",
+          "notes": "بعد الأكل"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "active",
+      "createdAt": "2026-11-08"
+    },
+    {
+      "id": "rx_4",
+      "number": "RX-2026-123",
+      "patientId": "pat_4",
+      "visitId": "vis_4",
+      "doctorId": "usr_doctor",
+      "date": "2026-11-04",
+      "diagnosis": "بدأ سكري من النوع الثاني",
+      "items": [
+        {
+          "name": "ميتفورمين 850 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "مرتين يوميًا بعد الأكل",
+          "duration": "شهر",
+          "route": "فموي",
+          "id": "itm_mwm91ueroqh9a"
+        },
+        {
+          "name": "سيتريزين 10 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "مرة يوميًا مساءً",
+          "duration": "10 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91uerlzbg9"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "active",
+      "createdAt": "2026-11-04"
+    },
+    {
+      "id": "rx_5",
+      "number": "RX-2026-124",
+      "patientId": "pat_5",
+      "visitId": "vis_5",
+      "doctorId": "usr_doctor",
+      "date": "2026-10-31",
+      "diagnosis": "التهاب المعدة المزمن / جرثومة المعدة",
+      "items": [
+        {
+          "name": "فيتامين د 50000 وحدة",
+          "form": "أمبولات",
+          "dose": "أمبول",
+          "frequency": "مرة أسبوعيًا",
+          "duration": "8 أسابيع",
+          "route": "فموي",
+          "id": "itm_mwm91uerqoub5"
+        },
+        {
+          "name": "ديكلوفيناك جل",
+          "form": "دهان",
+          "dose": "طبقة رقيقة",
+          "frequency": "3 مرات يوميًا",
+          "duration": "7 أيام",
+          "route": "موضعي",
+          "id": "itm_mwm91uerezs0v",
+          "notes": "بعد الأكل"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "active",
+      "createdAt": "2026-10-31"
+    },
+    {
+      "id": "rx_6",
+      "number": "RX-2026-125",
+      "patientId": "pat_6",
+      "visitId": "vis_6",
+      "doctorId": "usr_doctor",
+      "date": "2026-10-27",
+      "diagnosis": "انزلاق غضروفي قطني مبكر",
+      "items": [
+        {
+          "name": "سيتريزين 10 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "مرة يوميًا مساءً",
+          "duration": "10 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91uer2q4ai"
+        },
+        {
+          "name": "سالبوتامول بخاخ",
+          "form": "بخاخ",
+          "dose": "بختان",
+          "frequency": "عند الحاجة",
+          "duration": "شهر",
+          "route": "استنشاق",
+          "id": "itm_mwm91uer6a2ay"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "active",
+      "createdAt": "2026-10-27"
+    },
+    {
+      "id": "rx_7",
+      "number": "RX-2026-126",
+      "patientId": "pat_7",
+      "visitId": "vis_7",
+      "doctorId": "usr_doctor",
+      "date": "2026-10-23",
+      "diagnosis": "التهاب المفصل الروماتويدي",
+      "items": [
+        {
+          "name": "ديكلوفيناك جل",
+          "form": "دهان",
+          "dose": "طبقة رقيقة",
+          "frequency": "3 مرات يوميًا",
+          "duration": "7 أيام",
+          "route": "موضعي",
+          "id": "itm_mwm91uernmept"
+        },
+        {
+          "name": "باراسيتامول 500 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "كل 8 ساعات",
+          "duration": "5 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91uer3e8xu",
+          "notes": "بعد الأكل"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "active",
+      "createdAt": "2026-10-23"
+    },
+    {
+      "id": "rx_8",
+      "number": "RX-2026-127",
+      "patientId": "pat_8",
+      "visitId": "vis_8",
+      "doctorId": "usr_doctor",
+      "date": "2026-10-19",
+      "diagnosis": "أكزيما تأتبية",
+      "items": [
+        {
+          "name": "سالبوتامول بخاخ",
+          "form": "بخاخ",
+          "dose": "بختان",
+          "frequency": "عند الحاجة",
+          "duration": "شهر",
+          "route": "استنشاق",
+          "id": "itm_mwm91uer57bpd"
+        },
+        {
+          "name": "أوميبرازول 20 مجم",
+          "form": "كبسولات",
+          "dose": "كبسولة",
+          "frequency": "مرة يوميًا قبل الفطار",
+          "duration": "14 يومًا",
+          "route": "فموي",
+          "id": "itm_mwm91uerhzj3e"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "completed",
+      "createdAt": "2026-10-19"
+    },
+    {
+      "id": "rx_9",
+      "number": "RX-2026-128",
+      "patientId": "pat_9",
+      "visitId": "vis_9",
+      "doctorId": "usr_doctor",
+      "date": "2026-10-15",
+      "diagnosis": "أنيميا نقص الحديد",
+      "items": [
+        {
+          "name": "باراسيتامول 500 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "كل 8 ساعات",
+          "duration": "5 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91uer64070"
+        },
+        {
+          "name": "أموكسيسيلين 500 مجم",
+          "form": "كبسولات",
+          "dose": "كبسولة",
+          "frequency": "كل 8 ساعات",
+          "duration": "7 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91uera03ms",
+          "notes": "بعد الأكل"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "completed",
+      "createdAt": "2026-10-15"
+    },
+    {
+      "id": "rx_10",
+      "number": "RX-2026-129",
+      "patientId": "pat_10",
+      "visitId": "vis_10",
+      "doctorId": "usr_doctor",
+      "date": "2026-10-11",
+      "diagnosis": "التهاب اللوزتين الحاد",
+      "items": [
+        {
+          "name": "أوميبرازول 20 مجم",
+          "form": "كبسولات",
+          "dose": "كبسولة",
+          "frequency": "مرة يوميًا قبل الفطار",
+          "duration": "14 يومًا",
+          "route": "فموي",
+          "id": "itm_mwm91uers7ab4"
+        },
+        {
+          "name": "ميتفورمين 850 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "مرتين يوميًا بعد الأكل",
+          "duration": "شهر",
+          "route": "فموي",
+          "id": "itm_mwm91uerrvza0"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "completed",
+      "createdAt": "2026-10-11"
+    },
+    {
+      "id": "rx_11",
+      "number": "RX-2026-130",
+      "patientId": "pat_11",
+      "visitId": "vis_11",
+      "doctorId": "usr_doctor",
+      "date": "2026-10-07",
+      "diagnosis": "صداع توتري / نقص فيتامين د",
+      "items": [
+        {
+          "name": "أموكسيسيلين 500 مجم",
+          "form": "كبسولات",
+          "dose": "كبسولة",
+          "frequency": "كل 8 ساعات",
+          "duration": "7 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91ueru7xpw"
+        },
+        {
+          "name": "فيتامين د 50000 وحدة",
+          "form": "أمبولات",
+          "dose": "أمبول",
+          "frequency": "مرة أسبوعيًا",
+          "duration": "8 أسابيع",
+          "route": "فموي",
+          "id": "itm_mwm91uer8tz81",
+          "notes": "بعد الأكل"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "completed",
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "rx_12",
+      "number": "RX-2026-131",
+      "patientId": "pat_12",
+      "visitId": "vis_12",
+      "doctorId": "usr_doctor",
+      "date": "2026-10-03",
+      "diagnosis": "التهاب شعبي حاد",
+      "items": [
+        {
+          "name": "ميتفورمين 850 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "مرتين يوميًا بعد الأكل",
+          "duration": "شهر",
+          "route": "فموي",
+          "id": "itm_mwm91uervlj5g"
+        },
+        {
+          "name": "سيتريزين 10 مجم",
+          "form": "أقراص",
+          "dose": "قرص",
+          "frequency": "مرة يوميًا مساءً",
+          "duration": "10 أيام",
+          "route": "فموي",
+          "id": "itm_mwm91ueryfjr6"
+        }
+      ],
+      "advice": "الإكثار من السوائل، الراحة، وتجنب المجهود البدني العنيف لمدة أسبوع. العودة فورًا عند ظهور أعراض حادة.",
+      "status": "completed",
+      "createdAt": "2026-10-03"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv_1",
+      "number": "INV-2026-410",
+      "patientId": "pat_1",
+      "appointmentId": "apt_t1",
+      "date": "2026-11-18",
+      "items": [
+        {
+          "id": "ii_mwm91uer1l55j",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 400
+        },
+        {
+          "id": "ii_mwm91ueruecz0",
+          "desc": "تحاليل معملية (صورة دم كاملة)",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "id": "ii_mwm91uer4v9e2",
+          "desc": "رسم قلب كهربائي",
+          "qty": 1,
+          "price": 250
+        }
+      ],
+      "discount": 50,
+      "taxRate": 0,
+      "paid": 415,
+      "method": "instapay",
+      "status": "partial",
+      "createdAt": "2026-11-18"
+    },
+    {
+      "id": "inv_2",
+      "number": "INV-2026-411",
+      "patientId": "pat_2",
+      "appointmentId": "apt_t2",
+      "date": "2026-11-18",
+      "items": [
+        {
+          "id": "ii_mwm91uerk6tui",
+          "desc": "كشف متابعة",
+          "qty": 1,
+          "price": 300
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 300,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-18"
+    },
+    {
+      "id": "inv_3",
+      "number": "INV-2026-412",
+      "patientId": "pat_3",
+      "appointmentId": "apt_t3",
+      "date": "2026-11-18",
+      "items": [
+        {
+          "id": "ii_mwm91uersjd80",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 300
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 300,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-18"
+    },
+    {
+      "id": "inv_4",
+      "number": "INV-2026-413",
+      "patientId": "pat_4",
+      "appointmentId": "apt_t4",
+      "date": "2026-11-18",
+      "items": [
+        {
+          "id": "ii_mwm91ueryunr0",
+          "desc": "كشف متابعة",
+          "qty": 1,
+          "price": 300
+        },
+        {
+          "id": "ii_mwm91uerkbdj5",
+          "desc": "تحاليل معملية (صورة دم كاملة)",
+          "qty": 1,
+          "price": 180
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 480,
+      "method": "card",
+      "status": "paid",
+      "createdAt": "2026-11-18"
+    },
+    {
+      "id": "inv_5",
+      "number": "INV-2026-414",
+      "patientId": "pat_2",
+      "appointmentId": "apt_p1",
+      "date": "2026-11-17",
+      "items": [
+        {
+          "id": "ii_mwm91uerlddxu",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 400
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 400,
+      "method": "instapay",
+      "status": "paid",
+      "createdAt": "2026-11-17"
+    },
+    {
+      "id": "inv_6",
+      "number": "INV-2026-415",
+      "patientId": "pat_3",
+      "appointmentId": "apt_p2",
+      "date": "2026-11-16",
+      "items": [
+        {
+          "id": "ii_mwm91uer3nucc",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 300
+        },
+        {
+          "id": "ii_mwm91uer0vggb",
+          "desc": "رسم قلب كهربائي",
+          "qty": 1,
+          "price": 250
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 550,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "inv_7",
+      "number": "INV-2026-416",
+      "patientId": "pat_4",
+      "appointmentId": "apt_p3",
+      "date": "2026-11-15",
+      "items": [
+        {
+          "id": "ii_mwm91uerq7tgn",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 300
+        },
+        {
+          "id": "ii_mwm91uertc2oo",
+          "desc": "تحاليل معملية (صورة دم كاملة)",
+          "qty": 1,
+          "price": 180
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 240,
+      "method": "card",
+      "status": "partial",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "inv_8",
+      "number": "INV-2026-417",
+      "patientId": "pat_5",
+      "appointmentId": "apt_p4",
+      "date": "2026-11-14",
+      "items": [
+        {
+          "id": "ii_mwm91uergjvjf",
+          "desc": "كشف متابعة",
+          "qty": 1,
+          "price": 300
+        }
+      ],
+      "discount": 50,
+      "taxRate": 0,
+      "paid": 300,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-14"
+    },
+    {
+      "id": "inv_9",
+      "number": "INV-2026-418",
+      "patientId": "pat_6",
+      "appointmentId": "apt_p5",
+      "date": "2026-11-13",
+      "items": [
+        {
+          "id": "ii_mwm91uer8ch2i",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 400
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 400,
+      "method": "instapay",
+      "status": "paid",
+      "createdAt": "2026-11-13"
+    },
+    {
+      "id": "inv_10",
+      "number": "INV-2026-419",
+      "patientId": "pat_7",
+      "appointmentId": "apt_p6",
+      "date": "2026-11-12",
+      "items": [
+        {
+          "id": "ii_mwm91uerfv9xs",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 300
+        },
+        {
+          "id": "ii_mwm91uerqlnmi",
+          "desc": "تحاليل معملية (صورة دم كاملة)",
+          "qty": 1,
+          "price": 180
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 480,
+      "method": "card",
+      "status": "paid",
+      "createdAt": "2026-11-12"
+    },
+    {
+      "id": "inv_11",
+      "number": "INV-2026-420",
+      "patientId": "pat_8",
+      "appointmentId": "apt_p7",
+      "date": "2026-11-11",
+      "items": [
+        {
+          "id": "ii_mwm91uerveddk",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 300
+        },
+        {
+          "id": "ii_mwm91uertk8hj",
+          "desc": "رسم قلب كهربائي",
+          "qty": 1,
+          "price": 250
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 550,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-11"
+    },
+    {
+      "id": "inv_12",
+      "number": "INV-2026-421",
+      "patientId": "pat_9",
+      "appointmentId": "apt_p8",
+      "date": "2026-11-10",
+      "items": [
+        {
+          "id": "ii_mwm91uerfnqrq",
+          "desc": "كشف متابعة",
+          "qty": 1,
+          "price": 300
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 300,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-10"
+    },
+    {
+      "id": "inv_13",
+      "number": "INV-2026-422",
+      "patientId": "pat_11",
+      "appointmentId": "apt_p10",
+      "date": "2026-11-08",
+      "items": [
+        {
+          "id": "ii_mwm91uerf3p1w",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 400
+        },
+        {
+          "id": "ii_mwm91uerw4c9f",
+          "desc": "تحاليل معملية (صورة دم كاملة)",
+          "qty": 1,
+          "price": 180
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 290,
+      "method": "instapay",
+      "status": "partial",
+      "createdAt": "2026-11-08"
+    },
+    {
+      "id": "inv_14",
+      "number": "INV-2026-423",
+      "patientId": "pat_12",
+      "appointmentId": "apt_p11",
+      "date": "2026-11-07",
+      "items": [
+        {
+          "id": "ii_mwm91ueril1bq",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 300
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 300,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-07"
+    },
+    {
+      "id": "inv_15",
+      "number": "INV-2026-424",
+      "patientId": "pat_13",
+      "appointmentId": "apt_p12",
+      "date": "2026-11-06",
+      "items": [
+        {
+          "id": "ii_mwm91uerrllsc",
+          "desc": "كشف متابعة",
+          "qty": 1,
+          "price": 300
+        }
+      ],
+      "discount": 50,
+      "taxRate": 0,
+      "paid": 300,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-06"
+    },
+    {
+      "id": "inv_16",
+      "number": "INV-2026-425",
+      "patientId": "pat_14",
+      "appointmentId": "apt_p13",
+      "date": "2026-11-05",
+      "items": [
+        {
+          "id": "ii_mwm91uerzcd2l",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 300
+        },
+        {
+          "id": "ii_mwm91uer7omq5",
+          "desc": "تحاليل معملية (صورة دم كاملة)",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "id": "ii_mwm91uerac4pp",
+          "desc": "رسم قلب كهربائي",
+          "qty": 1,
+          "price": 250
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 730,
+      "method": "card",
+      "status": "paid",
+      "createdAt": "2026-11-05"
+    },
+    {
+      "id": "inv_17",
+      "number": "INV-2026-426",
+      "patientId": "pat_15",
+      "appointmentId": "apt_p14",
+      "date": "2026-11-04",
+      "items": [
+        {
+          "id": "ii_mwm91uerrufm0",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 400
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 400,
+      "method": "instapay",
+      "status": "paid",
+      "createdAt": "2026-11-04"
+    },
+    {
+      "id": "inv_18",
+      "number": "INV-2026-427",
+      "patientId": "pat_16",
+      "appointmentId": "apt_p15",
+      "date": "2026-11-03",
+      "items": [
+        {
+          "id": "ii_mwm91uerll5gz",
+          "desc": "كشف استشاري",
+          "qty": 1,
+          "price": 300
+        }
+      ],
+      "discount": 0,
+      "taxRate": 0,
+      "paid": 300,
+      "method": "cash",
+      "status": "paid",
+      "createdAt": "2026-11-03"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk_1",
+      "ref": "BK-2026-880",
+      "patientName": "هند مصطفى الشناوي",
+      "phone": "01033445566",
+      "email": "patient1@example.com",
+      "gender": "female",
+      "service": "كشف استشاري باطنة",
+      "preferredDate": "2026-11-20",
+      "preferredTime": "10:00",
+      "complaint": "ألم مستمر في الجانب الأيمن من البطن منذ 4 أيام مع غثيان.",
+      "paymentMethod": "instapay",
+      "paymentRef": "TRX9234561",
+      "paymentAmount": 150,
+      "receiptName": "receipt-1.jpg",
+      "status": "pending",
+      "createdAt": "2026-11-16"
+    },
+    {
+      "id": "bk_2",
+      "ref": "BK-2026-881",
+      "patientName": "زياد محمد العشري",
+      "phone": "01199887766",
+      "gender": "male",
+      "service": "متابعة ضغط الدم",
+      "preferredDate": "2026-11-21",
+      "preferredTime": "17:30",
+      "complaint": "قياسات الضغط مرتفعة رغم الالتزام بالعلاج.",
+      "paymentMethod": "vodafone-cash",
+      "paymentRef": "TRX9242480",
+      "paymentAmount": 150,
+      "status": "pending",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "bk_3",
+      "ref": "BK-2026-882",
+      "patientName": "منى عبد الحميد",
+      "phone": "01277665544",
+      "email": "patient3@example.com",
+      "gender": "female",
+      "service": "استشارة عن بُعد",
+      "preferredDate": "2026-11-22",
+      "preferredTime": "10:00",
+      "complaint": "أريد مراجعة نتائج تحاليل الغدة الدرقية.",
+      "paymentMethod": "card",
+      "paymentRef": "TRX9250399",
+      "paymentAmount": 200,
+      "status": "verified",
+      "createdAt": "2026-11-14"
+    },
+    {
+      "id": "bk_4",
+      "ref": "BK-2026-883",
+      "patientName": "خالد سعيد الجندي",
+      "phone": "01011223344",
+      "gender": "male",
+      "service": "كشف جديد",
+      "preferredDate": "2026-11-23",
+      "preferredTime": "17:30",
+      "complaint": "كحة جافة مستمرة منذ 10 أيام.",
+      "paymentMethod": "bank-transfer",
+      "paymentRef": "TRX9258318",
+      "paymentAmount": 150,
+      "receiptName": "receipt-4.jpg",
+      "status": "converted",
+      "createdAt": "2026-11-13",
+      "patientId": "pat_1"
+    },
+    {
+      "id": "bk_5",
+      "ref": "BK-2026-884",
+      "patientName": "أميرة فتحي",
+      "phone": "01566778899",
+      "email": "patient5@example.com",
+      "gender": "female",
+      "service": "كشف جلدية",
+      "preferredDate": "2026-11-24",
+      "preferredTime": "10:00",
+      "complaint": "طفح جلدي متكرر بالوجه.",
+      "paymentMethod": "instapay",
+      "paymentRef": "TRX9266237",
+      "paymentAmount": 100,
+      "status": "rejected",
+      "createdAt": "2026-11-12",
+      "reviewNote": "لم يتم العثور على إيصال الدفع المرفق."
+    },
+    {
+      "id": "bk_6",
+      "ref": "BK-2026-885",
+      "patientName": "حسام الدين رأفت",
+      "phone": "01066554433",
+      "gender": "male",
+      "service": "كشف استشاري باطنة",
+      "preferredDate": "2026-11-19",
+      "preferredTime": "17:30",
+      "complaint": "دوخة متكررة مع زغللة بالعين.",
+      "paymentMethod": "instapay",
+      "paymentRef": "TRX9274156",
+      "paymentAmount": 150,
+      "status": "pending",
+      "createdAt": "2026-11-17"
+    }
+  ],
+  "archive": [
+    {
+      "id": "arc_1",
+      "title": "تحاليل صورة دم كاملة — CBC",
+      "category": "lab",
+      "patientId": "pat_1",
+      "date": "2026-11-15",
+      "tags": [
+        "متابعة",
+        "مهم"
+      ],
+      "size": "0.4 MB",
+      "format": "pdf"
+    },
+    {
+      "id": "arc_2",
+      "title": "أشعة رنين مغناطيسي على الفقرات القطنية",
+      "category": "radiology",
+      "patientId": "pat_2",
+      "date": "2026-11-10",
+      "tags": [
+        "ملف جديد",
+        "عادي"
+      ],
+      "size": "0.8 MB",
+      "format": "pdf"
+    },
+    {
+      "id": "arc_3",
+      "title": "إقرار موافقة على إجراء طبي",
+      "category": "consent",
+      "patientId": "pat_3",
+      "date": "2026-11-05",
+      "tags": [
+        "متابعة",
+        "عادي"
+      ],
+      "size": "1.1 MB",
+      "format": "pdf",
+      "note": "موقّع إلكترونيًا من المريض."
+    },
+    {
+      "id": "arc_4",
+      "title": "تقرير استشاري قلب وأوعية دموية",
+      "category": "report",
+      "patientId": "pat_4",
+      "date": "2026-10-31",
+      "tags": [
+        "ملف جديد",
+        "مهم"
+      ],
+      "size": "1.5 MB",
+      "format": "docx"
+    },
+    {
+      "id": "arc_5",
+      "title": "بطاقة تأمين طبي — نسخة مصورة",
+      "category": "insurance",
+      "patientId": "pat_5",
+      "date": "2026-10-26",
+      "tags": [
+        "متابعة",
+        "عادي"
+      ],
+      "size": "1.9 MB",
+      "format": "jpg"
+    },
+    {
+      "id": "arc_6",
+      "title": "تحليل سكر صائم وتراكمي",
+      "category": "lab",
+      "patientId": "pat_6",
+      "date": "2026-10-21",
+      "tags": [
+        "ملف جديد",
+        "عادي"
+      ],
+      "size": "2.3 MB",
+      "format": "pdf"
+    },
+    {
+      "id": "arc_7",
+      "title": "أشعة مقطعية على الصدر",
+      "category": "radiology",
+      "patientId": "pat_7",
+      "date": "2026-10-16",
+      "tags": [
+        "متابعة",
+        "مهم"
+      ],
+      "size": "2.6 MB",
+      "format": "png"
+    },
+    {
+      "id": "arc_8",
+      "title": "تقرير خروج من المستشفى",
+      "category": "report",
+      "patientId": "pat_8",
+      "date": "2026-10-11",
+      "tags": [
+        "ملف جديد",
+        "عادي"
+      ],
+      "size": "3.0 MB",
+      "format": "pdf"
+    },
+    {
+      "id": "arc_9",
+      "title": "إقرار استلام وصفة طبية",
+      "category": "consent",
+      "patientId": "pat_9",
+      "date": "2026-10-06",
+      "tags": [
+        "متابعة",
+        "عادي"
+      ],
+      "size": "3.4 MB",
+      "format": "pdf"
+    },
+    {
+      "id": "arc_10",
+      "title": "تحليل وظائف كبد وكلى",
+      "category": "lab",
+      "patientId": "pat_10",
+      "date": "2026-10-01",
+      "tags": [
+        "ملف جديد",
+        "مهم"
+      ],
+      "size": "3.7 MB",
+      "format": "pdf"
+    },
+    {
+      "id": "arc_11",
+      "title": "تقرير متابعة ضغط الدم اليومي",
+      "category": "other",
+      "patientId": "pat_11",
+      "date": "2026-09-26",
+      "tags": [
+        "متابعة",
+        "عادي"
+      ],
+      "size": "4.1 MB",
+      "format": "docx"
+    },
+    {
+      "id": "arc_12",
+      "title": "موافقة على تصوير إشعاعي",
+      "category": "consent",
+      "patientId": "pat_12",
+      "date": "2026-09-21",
+      "tags": [
+        "ملف جديد",
+        "عادي"
+      ],
+      "size": "4.5 MB",
+      "format": "pdf"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_admin",
+      "name": "مدير النظام",
+      "role": "manager",
+      "email": "admin",
+      "phone": "admin",
+      "active": true,
+      "specialty": "مدير النظام — صلاحيات كاملة",
+      "extraPermissions": [
+        "dashboard.view",
+        "patients.view",
+        "patients.edit",
+        "appointments.view",
+        "appointments.edit",
+        "records.view",
+        "records.edit",
+        "prescriptions.view",
+        "prescriptions.edit",
+        "billing.view",
+        "billing.edit",
+        "archive.view",
+        "reports.view",
+        "users.view",
+        "users.edit",
+        "settings.edit",
+        "profile.edit"
+      ],
+      "createdAt": "2024-01-01"
+    },
+    {
+      "id": "usr_doctor",
+      "name": "د. كريم الجوهري",
+      "role": "doctor",
+      "email": "doctor@tabib.clinic",
+      "phone": "01001234567",
+      "active": true,
+      "specialty": "استشاري الباطنة العامة",
+      "extraPermissions": [],
+      "createdAt": "2023-01-04"
+    },
+    {
+      "id": "usr_manager",
+      "name": "نهى عبد المنعم",
+      "role": "manager",
+      "email": "manager@tabib.clinic",
+      "phone": "01007654321",
+      "active": true,
+      "specialty": "مدير العيادة",
+      "extraPermissions": [],
+      "createdAt": "2023-02-11"
+    },
+    {
+      "id": "usr_reception",
+      "name": "محمود سامي",
+      "role": "receptionist",
+      "email": "reception@tabib.clinic",
+      "phone": "01102223344",
+      "active": true,
+      "extraPermissions": [
+        "records.view"
+      ],
+      "createdAt": "2023-06-19"
+    },
+    {
+      "id": "usr_nurse",
+      "name": "سلمى فايز",
+      "role": "nurse",
+      "email": "nurse@tabib.clinic",
+      "phone": "01203334455",
+      "active": true,
+      "extraPermissions": [],
+      "createdAt": "2024-01-08"
+    },
+    {
+      "id": "usr_accountant",
+      "name": "وليد شعبان",
+      "role": "accountant",
+      "email": "accounts@tabib.clinic",
+      "phone": "01505556677",
+      "active": true,
+      "extraPermissions": [],
+      "createdAt": "2024-03-02"
+    },
+    {
+      "id": "usr_inactive",
+      "name": "ريم حسن",
+      "role": "receptionist",
+      "email": "reem@tabib.clinic",
+      "phone": "01098887766",
+      "active": false,
+      "extraPermissions": [],
+      "createdAt": "2024-05-21"
+    }
+  ],
+  "reminders": [],
+  "audit": [],
+  "settings": {
+    "clinicName": "عيادة د. كريم الجوهري",
+    "clinicNameEn": "Dr. Karim El-Gohary Clinic",
+    "doctorName": "د. كريم الجوهري",
+    "specialty": "استشاري الباطنة العامة والجهاز الهضمي",
+    "phone": "0223456789",
+    "whatsapp": "01001234567",
+    "email": "hello@tabib.clinic",
+    "address": "٢٧ شارع ٩، المعادي، القاهرة",
+    "city": "القاهرة",
+    "currency": "ج.م",
+    "taxRate": 0,
+    "consultationFee": 300,
+    "followUpFee": 200,
+    "slotMinutes": 30,
+    "workingDays": [
+      {
+        "day": "السبت",
+        "open": true,
+        "from": "10:00",
+        "to": "18:00"
+      },
+      {
+        "day": "الأحد",
+        "open": true,
+        "from": "09:00",
+        "to": "18:00"
+      },
+      {
+        "day": "الإثنين",
+        "open": true,
+        "from": "09:00",
+        "to": "18:00"
+      },
+      {
+        "day": "الثلاثاء",
+        "open": true,
+        "from": "09:00",
+        "to": "18:00"
+      },
+      {
+        "day": "الأربعاء",
+        "open": true,
+        "from": "09:00",
+        "to": "18:00"
+      },
+      {
+        "day": "الخميس",
+        "open": true,
+        "from": "09:00",
+        "to": "14:00"
+      },
+      {
+        "day": "الجمعة",
+        "open": false,
+        "from": "—",
+        "to": "—"
+      }
+    ],
+    "onlineBookingEnabled": true,
+    "requirePayment": true,
+    "depositAmount": 150,
+    "autoConfirm": false,
+    "reminderHours": 24,
+    "paymentMethods": [
+      "إنستاباي",
+      "فودافون كاش",
+      "تحويل بنكي",
+      "بطاقة بنكية",
+      "نقدي بالعيادة"
+    ],
+    "bankAccount": "بنك مصر — 1234 5678 9012 3456",
+    "instapayHandle": "karim.clinic@instapay",
+    "vodafoneCash": "0100 123 4567",
+    "theme": "light"
+  },
+  "profile": {
+    "name": "د. كريم الجوهري",
+    "title": "استشاري الباطنة العامة والجهاز الهضمي",
+    "specialty": "الباطنة العامة",
+    "subSpecialty": "أمراض الجهاز الهضمي والكبد",
+    "bio": "أكثر من ١٨ عامًا في ممارسة الطب الباطني، مع اهتمام خاص بأمراض الجهاز الهضمي والكبد واضطرابات التمثيل الغذائي. أؤمن أن العلاقة بين الطبيب والمريض تبدأ بالاستماع الجيد، وتنتهي بخطة علاج واضحة يمكن للمريض تنفيذها بثقة.",
+    "philosophy": "الطب الجيد ليس وصف دواء فقط، بل شرح سبب المرض بلغة يفهمها المريض، وبناء خطة متابعة واقعية تحترم وقته وظروفه.",
+    "experienceYears": 18,
+    "patientsCount": "+9,600",
+    "rating": 4.9,
+    "reviewsCount": 327,
+    "languages": [
+      "العربية",
+      "الإنجليزية",
+      "الفرنسية"
+    ],
+    "education": [
+      {
+        "year": "2008",
+        "title": "بكالوريوس الطب والجراحة — بتقدير امتياز",
+        "place": "كلية الطب، جامعة القاهرة"
+      },
+      {
+        "year": "2012",
+        "title": "ماجستير الباطنة العامة",
+        "place": "جامعة عين شمس"
+      },
+      {
+        "year": "2016",
+        "title": "دكتوراه أمراض الجهاز الهضمي",
+        "place": "جامعة القاهرة"
+      }
+    ],
+    "certifications": [
+      {
+        "year": "2017",
+        "title": "زمالة الجهاز الهضمي",
+        "org": "الجمعية الأوروبية لأمراض الجهاز الهضمي (UEG)"
+      },
+      {
+        "year": "2019",
+        "title": "دبلوم السونار البطني",
+        "org": "الجامعة الأمريكية بالقاهرة"
+      },
+      {
+        "year": "2022",
+        "title": "شهادة إدارة العيادات",
+        "org": "الكلية الملكية للأطباء — لندن"
+      }
+    ],
+    "memberships": [
+      "الجمعية المصرية للجهاز الهضمي والكبد",
+      "الجمعية الأوروبية للتغذية الإكلينيكية (ESPEN)",
+      "نقابة الأطباء المصرية"
+    ],
+    "services": [
+      {
+        "icon": "stethoscope",
+        "title": "الكشف الاستشاري",
+        "desc": "تقييم شامل للحالة مع مراجعة التاريخ المرضي والتحاليل السابقة وخطة علاج واضحة.",
+        "price": 300
+      },
+      {
+        "icon": "activity",
+        "title": "متابعة الأمراض المزمنة",
+        "desc": "متابعة الضغط والسكري والكوليسترول بخطة شهرية وتعديل الجرعات حسب النتائج.",
+        "price": 200
+      },
+      {
+        "icon": "scan",
+        "title": "سونار البطن والكبد",
+        "desc": "تصوير بالموجات الصوتية داخل العيادة مع تقرير فوري وصور للمريض.",
+        "price": 350
+      },
+      {
+        "icon": "flask",
+        "title": "تقييم نتائج التحاليل",
+        "desc": "قراءة تحاليلك بعناية وشرح مبسط لكل مؤشر وما يحتاج تعديلًا فعليًا.",
+        "price": 150
+      },
+      {
+        "icon": "video",
+        "title": "استشارة عن بُعد",
+        "desc": "جلسة فيديو آمنة لمتابعة الحالات المستقرة أو مراجعة النتائج من منزلك.",
+        "price": 200
+      },
+      {
+        "icon": "heart",
+        "title": "برامج إنقاص الوزن",
+        "desc": "خطة غذائية وطبية متكاملة بإشراف مباشر مع متابعة أسبوعية للنتائج.",
+        "price": 400
+      }
+    ],
+    "awards": [
+      {
+        "year": "2021",
+        "title": "أفضل طبيب باطنة — اختيار المرضى"
+      },
+      {
+        "year": "2023",
+        "title": "شهادة التميز في رعاية المرضى"
+      }
+    ],
+    "photoInitials": "ك.ج",
+    "publicSlug": "dr-karim"
+  }
+}

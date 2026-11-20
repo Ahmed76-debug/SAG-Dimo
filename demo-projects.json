@@ -1,0 +1,211 @@
+{
+  "portalPort": 8000,
+  "siteTitle": "Smart Activity Group / مجموعة الأنشطه الذكيه — نسخ تجريبية كاملة",
+  "projects": [
+    {
+      "id": "adala-platform",
+      "label": "العدالة",
+      "subtitle": "منصة قانونية",
+      "icon": "⚖️",
+      "category": "قانوني",
+      "color": "#1d4ed8",
+      "port": 5181,
+      "internalPort": 15181,
+      "entry": "server/index.mjs",
+      "login": "admin / admin123",
+      "description": "قضايا، موكلون، جلسات، مستندات وفواتير مكتب محاماة.",
+      "env": {
+        "DATA_DIR": "{DATA}",
+        "DB_FILE": "{DATA}/adala.db"
+      }
+    },
+    {
+      "id": "doctor-clinic-platform",
+      "label": "طبيب",
+      "subtitle": "إدارة عيادة طبية",
+      "icon": "🩺",
+      "category": "طبي",
+      "color": "#16a34a",
+      "port": 5191,
+      "internalPort": 15191,
+      "entry": "server/index.mjs",
+      "login": "admin / admin123",
+      "description": "مرضى، مواعيد، زيارات، وصفات، فواتير وحجوزات العيادة.",
+      "env": {
+        "DATA_DIR": "{DATA}",
+        "DB_FILE": "{DATA}/tabib.db"
+      }
+    },
+    {
+      "id": "pharmacy-pro",
+      "label": "فارما برو",
+      "subtitle": "إدارة صيدلية",
+      "icon": "💊",
+      "category": "طبي",
+      "color": "#0891b2",
+      "port": 4173,
+      "internalPort": 14173,
+      "entry": "server/app.js",
+      "login": "admin / admin123",
+      "description": "أدوية، مخزون، مبيعات، وصفات، فواتير وتنبيهات انتهاء الصلاحية.",
+      "env": {
+        "PHARMACY_DATA_DIR": "{DATA}",
+        "PHARMACY_DB_FILE": "{DATA}/pharmacy.db"
+      }
+    },
+    {
+      "id": "muraqib-financial-platform",
+      "label": "المراقب المالي",
+      "subtitle": "منصة مراجعة مالية",
+      "icon": "📊",
+      "category": "مالي",
+      "color": "#ea580c",
+      "port": 5183,
+      "internalPort": 15183,
+      "entry": "server/index.mjs",
+      "login": "admin / admin123",
+      "description": "شركات، ميزان مراجعة، قيود، تقارير ومراجعات مالية.",
+      "env": {
+        "DATA_DIR": "{DATA}",
+        "DB_FILE": "{DATA}/muraqib.db"
+      }
+    },
+    {
+      "id": "edusphere",
+      "label": "EduSphere",
+      "subtitle": "إدارة مدرسة دولية",
+      "icon": "🎓",
+      "category": "تعليم",
+      "color": "#7c3aed",
+      "port": 4174,
+      "internalPort": 14174,
+      "entry": "server/index.js",
+      "login": "admin / admin123",
+      "description": "طلاب، معلمون، حضور، درجات، جداول ورسوم دراسية.",
+      "env": {
+        "EDUSPHERE_DATA": "{DATA}",
+        "EDUSPHERE_DB": "{DATA}/edusphere.db",
+        "EDUSPHERE_BACKUP_DIR": "{DATA}/backups"
+      }
+    },
+    {
+      "id": "auto-car",
+      "label": "أوتو كار",
+      "subtitle": "إدارة معرض سيارات",
+      "icon": "🚗",
+      "category": "تجاري",
+      "color": "#2563eb",
+      "port": 4500,
+      "internalPort": 14500,
+      "entry": "server.js",
+      "login": "admin / admin123",
+      "description": "معرض سيارات متكامل: مخزون، مبيعات، فواتير، عملاء وصيانة.",
+      "env": {
+        "DATA_DIR": "{DATA}",
+        "DB_FILE": "{DATA}/autocar.db",
+        "BACKUP_DIR": "{DATA}/backups"
+      }
+    },
+    {
+      "id": "baraka-market",
+      "label": "بركة ماركت",
+      "subtitle": "سوبر ماركت ونقاط بيع",
+      "icon": "🛒",
+      "category": "تجاري",
+      "color": "#059669",
+      "port": 4300,
+      "internalPort": 14300,
+      "entry": "server.js",
+      "login": "admin / admin123",
+      "description": "نقطة بيع ومخزون وموردين وتقارير مبيعات يومية.",
+      "env": {
+        "DATA_DIR": "{DATA}",
+        "DB_FILE": "{DATA}/baraka.db",
+        "BACKUP_DIR": "{DATA}/backups"
+      }
+    },
+    {
+      "id": "cafe-manager",
+      "label": "إدارة الكافيه",
+      "subtitle": "مطاعم وكافيهات",
+      "icon": "☕",
+      "category": "تجاري",
+      "color": "#b45309",
+      "port": 3000,
+      "internalPort": 13000,
+      "entry": "server.js",
+      "login": "admin / admin123",
+      "description": "طلبات، طاولات، منيو، مخزون وحسابات يومية للكافيه.",
+      "env": {
+        "CAFE_DB": "{DATA}/cafe.db",
+        "SQLITE_DB": "{DATA}/cafe.db"
+      }
+    },
+    {
+      "id": "delivery",
+      "label": "طلباتك",
+      "subtitle": "إدارة التوصيل",
+      "icon": "🛵",
+      "category": "خدمات",
+      "color": "#dc2626",
+      "port": 8080,
+      "internalPort": 18080,
+      "entry": "server.js",
+      "login": "admin / admin123",
+      "description": "طلبات، مندوبين، تتبع توصيل، فواتير وتقارير أداء.",
+      "env": {
+        "TALABATAK_DATA": "{DATA}"
+      }
+    },
+    {
+      "id": "miftah-studio",
+      "label": "مفتاح ستوديو",
+      "subtitle": "إدارة تراخيص البرمجيات",
+      "icon": "🔑",
+      "category": "تقني",
+      "color": "#c026d3",
+      "port": 4781,
+      "internalPort": 14781,
+      "entry": "server/index.mjs",
+      "login": "admin / admin123",
+      "description": "منتجات، عملاء، تراخيص، تفعيلات، أدوار ونسخ احتياطية.",
+      "env": {
+        "MIFTAH_DATA_DIR": "{DATA}",
+        "MIFTAH_KEYS_DIR": "{DATA}/keys",
+        "MIFTAH_BACKUP_DIR": "{DATA}/backups"
+      }
+    },
+    {
+      "id": "Tasawuq",
+      "label": "تسوق",
+      "subtitle": "مبوبات السيارات والعقارات",
+      "icon": "🏷️",
+      "category": "تجاري",
+      "color": "#0e7490",
+      "port": 8081,
+      "internalPort": 18081,
+      "entry": "server.js",
+      "login": "admin / admin123",
+      "description": "موقع مبوبات بيع وشراء السيارات والعقارات والأراضي مع العمولة والصلاحيات.",
+      "env": {
+        "DATA_DIR": "{DATA}"
+      }
+    },
+    {
+      "id": "smart-profile-cms",
+      "label": "الملف التعريفي",
+      "subtitle": "نظام إدارة محتوى الشركة",
+      "icon": "🧩",
+      "category": "تقني",
+      "color": "#0d9488",
+      "port": 3001,
+      "internalPort": 13010,
+      "entry": "server.js",
+      "login": "admin / admin123",
+      "description": "لوحة تحكم كاملة لإدارة محتوى الملف التعريفي للشركة ورسائل العملاء.",
+      "env": {
+        "DATA_DIR": "{DATA}"
+      }
+    }
+  ]
+}

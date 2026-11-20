@@ -1,0 +1,14 @@
+{
+  "name": "سوق البركة — نظام إدارة المتجر",
+  "short_name": "سوق البركة",
+  "description": "نظام ERP وكاشير احترافي لسوبر ماركت وخضروات ولحوم",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070f0c",
+  "theme_color": "#0b2e23",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    { "src": "/assets/img/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

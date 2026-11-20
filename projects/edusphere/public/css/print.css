@@ -1,0 +1,11 @@
+@media print {
+  .sidebar, .topbar, .scrim, .toast-stack, .page-head__actions, .toolbar, .pagination,
+  .drawer-overlay, .drawer, .overlay, .modal, .btn, .icon-btn, .dropdown { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .app-shell { display: block !important; }
+  .main { margin: 0 !important; padding: 0 !important; }
+  .content { padding: 0 !important; }
+  .card { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+  .table-wrap { overflow: visible !important; }
+  a[href]::after { content: ""; }
+}

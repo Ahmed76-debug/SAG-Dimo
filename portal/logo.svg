@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Smart Activity Group">
+  <defs>
+    <linearGradient id="sag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f8cff"/>
+      <stop offset="0.52" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22d3a6"/>
+    </linearGradient>
+    <linearGradient id="sagline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#d9fff0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#sag)"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="16.5" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M12 34h8l5-11 7 22 6-14 4 3h9" fill="none" stroke="url(#sagline)" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="47" cy="34" r="3.1" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل الإعلان - تسوق</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/detail.css">
+  <script>(function(){try{var t=localStorage.getItem('ts_theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><span class="logo-mark">🏠</span><span class="logo-text">تسوق </span></a>
+      <nav class="nav">
+        <a href="/" class="nav-link"><i class="bi bi-house-door"></i> الرئيسية</a>
+        <a href="/listings.html?type=cars" class="nav-link"><i class="bi bi-car-front"></i> سيارات</a>
+        <a href="/listings.html?type=real_estate" class="nav-link"><i class="bi bi-building"></i> عقارات</a>
+        <a href="/listings.html?type=lands" class="nav-link"><i class="bi bi-map"></i> أراضي</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-icon" id="themeToggle"><i class="bi bi-moon-stars"></i></button>
+        <a href="/add-listing.html" class="btn btn-primary"><i class="bi bi-plus-circle"></i> أضف إعلان</a>
+        <div class="user-menu" id="userMenu" style="display:none">
+          <button class="btn btn-ghost"><i class="bi bi-person-circle"></i> <span id="userName">حسابي</span> <i class="bi bi-chevron-down"></i></button>
+          <div class="dropdown">
+            <a href="/dashboard.html"><i class="bi bi-speedometer2"></i> لوحة التحكم</a>
+            <a href="/my-listings.html"><i class="bi bi-card-list"></i> إعلاناتي</a>
+            <a href="/messages.html"><i class="bi bi-chat-dots"></i> الرسائل</a>
+            <a href="/favorites.html"><i class="bi bi-heart"></i> المفضلة</a>
+            <a href="#" id="logoutBtn"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a>
+          </div>
+        </div>
+        <a href="/login.html" class="btn btn-ghost" id="loginBtn"><i class="bi bi-box-arrow-in-right"></i> دخول / تسجيل</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="detail-wrap">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">الرئيسية</a> <i class="bi bi-chevron-left"></i>
+        <a href="/listings.html">الإعلانات</a> <i class="bi bi-chevron-left"></i>
+        <span id="crumbTitle">...</span>
+      </nav>
+
+      <div class="detail-grid">
+        <div class="detail-main">
+          <div class="gallery">
+            <div class="gallery-main">
+              <img id="mainImg" src="" alt="">
+              <button class="gallery-nav prev" id="prevImg"><i class="bi bi-chevron-right"></i></button>
+              <button class="gallery-nav next" id="nextImg"><i class="bi bi-chevron-left"></i></button>
+            </div>
+            <div class="gallery-thumbs" id="thumbs"></div>
+          </div>
+
+          <div class="card-section">
+            <div class="section-head">
+              <div>
+                <span class="type-badge" id="typeBadge"></span>
+                <h1 class="detail-title" id="detailTitle"></h1>
+                <div class="detail-meta">
+                  <span><i class="bi bi-geo-alt"></i> <span id="detailCity"></span></span>
+                  <span><i class="bi bi-eye"></i> <span id="detailViews"></span> مشاهدة</span>
+                  <span><i class="bi bi-clock"></i> <span id="detailDate"></span></span>
+                </div>
+              </div>
+              <button class="btn-icon-lg" id="favBtn"><i class="bi bi-heart"></i></button>
+            </div>
+          </div>
+
+          <div class="card-section">
+            <h2 class="section-title-sm"><i class="bi bi-file-text"></i> وصف الإعلان</h2>
+            <div class="description" id="detailDesc"></div>
+          </div>
+
+          <div class="card-section" id="attrsSection">
+            <h2 class="section-title-sm"><i class="bi bi-list-check"></i> المواصفات</h2>
+            <div class="attrs-grid" id="attrsGrid"></div>
+          </div>
+
+          <div class="card-section">
+            <h2 class="section-title-sm"><i class="bi bi-shield-check"></i> نصائح الأمان</h2>
+            <ul class="tips-list">
+              <li>قابل البائع في مكان عام وآمن</li>
+              <li>تحقق من المنتج قبل الدفع</li>
+              <li>لا ترسل أموال مقدماً لحسابات مجهولة</li>
+              <li>استخدم وسائل دفع آمنة</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="detail-side">
+          <div class="price-card">
+            <div class="price-main" id="detailPrice"></div>
+            <div class="price-note" id="priceNote"></div>
+          </div>
+
+          <div class="seller-card">
+            <div class="seller-header">
+              <div class="seller-avatar">👤</div>
+              <div>
+                <div class="seller-name" id="sellerName"></div>
+                <div class="seller-since">عضو منذ <span id="sellerSince"></span></div>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-block" id="callBtn"><i class="bi bi-telephone"></i> اتصال</a>
+            <a class="btn btn-success btn-block" id="whatsappBtn" target="_blank"><i class="bi bi-whatsapp"></i> واتساب</a>
+            <button class="btn btn-ghost btn-block" id="msgBtn"><i class="bi bi-chat-dots"></i> إرسال رسالة</button>
+          </div>
+
+          <div class="share-card">
+            <h3>مشاركة الإعلان</h3>
+            <div class="share-btns">
+              <button class="share-btn" onclick="share('whatsapp')"><i class="bi bi-whatsapp"></i></button>
+              <button class="share-btn" onclick="share('facebook')"><i class="bi bi-facebook"></i></button>
+              <button class="share-btn" onclick="share('twitter')"><i class="bi bi-twitter-x"></i></button>
+              <button class="share-btn" onclick="copyLink()"><i class="bi bi-link-45deg"></i></button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal hidden" id="msgModal">
+    <div class="modal-backdrop" id="msgBackdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="bi bi-chat-dots"></i> إرسال رسالة للبائع</h3>
+        <button class="btn-icon" id="msgClose"><i class="bi bi-x"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">رسالتك</label>
+          <textarea class="form-textarea" id="msgText" rows="5" placeholder="السلام عليكم، أريد الاستفسار عن هذا الإعلان..."></textarea>
+        </div>
+        <button class="btn btn-primary btn-block" id="sendMsg"><i class="bi bi-send"></i> إرسال الرسالة</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo"><span class="logo-mark">🏠</span><span class="logo-text">تسوق</span></a><p>موقع مبوبات لبيع وشراء السيارات والمنازل والأراضي</p></div>
+        <div class="footer-links"><h4>أقسام الموقع</h4><ul><li><a href="/listings.html?type=cars">سيارات</a></li><li><a href="/listings.html?type=real_estate">عقارات</a></li><li><a href="/listings.html?type=lands">أراضي</a></li></ul></div>
+        <div class="footer-links"><h4>حسابي</h4><ul><li><a href="/add-listing.html">أضف إعلان</a></li><li><a href="/my-listings.html">إعلاناتي</a></li><li><a href="/favorites.html">المفضلة</a></li></ul></div>
+        <div class="footer-links"><h4>معلومات</h4><ul><li><a href="/page.html?slug=about">من نحن</a></li><li><a href="/page.html?slug=terms">شروط الاستخدام</a></li><li><a href="/page.html?slug=privacy">سياسة الخصوصية</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>جميع الحقوق محفوظة © 2026 تسوق</p></div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>
+

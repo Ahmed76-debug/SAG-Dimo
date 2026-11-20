@@ -1,0 +1,5 @@
+
+> muraqib-financial-platform@1.0.0 build
+> tsc -b && vite build
+
+src/layouts/AppLayout.tsx(7,17): error TS6133: 'Sparkles' is declared but its value is never read.

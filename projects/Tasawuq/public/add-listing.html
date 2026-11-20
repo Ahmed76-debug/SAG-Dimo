@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أضف إعلان جديد - تسوق</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/add.css">
+  <script>(function(){try{var t=localStorage.getItem('ts_theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><span class="logo-mark">🏠</span><span class="logo-text">تسوق </span></a>
+      <div class="header-actions">
+        <button class="btn-icon" id="themeToggle"><i class="bi bi-moon-stars"></i></button>
+        <a href="/" class="btn btn-ghost"><i class="bi bi-arrow-right"></i> العودة للرئيسية</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="add-wrap">
+    <div class="container" style="max-width:900px">
+      <div class="page-head-center">
+        <h1>أضف إعلان جديد</h1>
+        <p>أضف إعلانك مجانًا وسيظهر بعد موافقة الإدارة</p>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-step active" data-step="1"><div class="step-num">1</div><span>نوع الإعلان</span></div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2"><div class="step-num">2</div><span>تفاصيل الإعلان</span></div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3"><div class="step-num">3</div><span>الصور والموقع</span></div>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="step-content active" id="step1">
+        <div class="card-form">
+          <h2 class="form-title">اختر نوع الإعلان</h2>
+          <div class="type-cards">
+            <div class="type-card" data-type="cars">
+              <div class="type-icon">🚗</div>
+              <h3>سيارة</h3>
+              <p>بيع أو شراء سيارة</p>
+            </div>
+            <div class="type-card" data-type="real_estate">
+              <div class="type-icon">🏠</div>
+              <h3>عقار</h3>
+              <p>شقة - فيلا - محل - مكتب</p>
+            </div>
+            <div class="type-card" data-type="lands">
+              <div class="type-icon">🌍</div>
+              <h3>أرض</h3>
+              <p>أرض زراعية أو للبناء</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-content" id="step2">
+        <div class="card-form">
+          <h2 class="form-title">تفاصيل الإعلان</h2>
+          <div class="form-row">
+            <div class="form-group full">
+              <label class="form-label">عنوان الإعلان <span class="required">*</span></label>
+              <input type="text" class="form-input" id="f_title" placeholder="مثال: سيارة تويوتا كورولا 2020 للبيع">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">السعر <span class="required">*</span></label>
+              <input type="number" class="form-input" id="f_price" placeholder="0">
+            </div>
+            <div class="form-group">
+              <label class="form-label">العملة</label>
+              <select class="form-input" id="f_currency"><option value="ج.م">جنيه مصري</option></select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">قابل للتفاوض</label>
+              <select class="form-input" id="f_negotiable"><option value="1">نعم</option><option value="0">لا</option></select>
+            </div>
+          </div>
+          <div id="dynamicFields"></div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label class="form-label">وصف الإعلان</label>
+              <textarea class="form-textarea" id="f_desc" rows="6" placeholder="اكتب وصفًا مفصلاً عن الإعلان..."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-ghost" onclick="goStep(1)"><i class="bi bi-arrow-right"></i> السابق</button>
+            <button class="btn btn-primary" onclick="goStep(3)">التالي <i class="bi bi-arrow-left"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-content" id="step3">
+        <div class="card-form">
+          <h2 class="form-title">الصور والموقع والتواصل</h2>
+          <div class="form-row">
+            <div class="form-group full">
+              <label class="form-label">الصور والفيديوهات (يمكن رفع عدة ملفات)</label>
+              <div class="upload-zone" id="uploadZone">
+                <i class="bi bi-cloud-upload"></i>
+                <p>اسحب الصور أو الفيديوهات هنا أو انقر للاختيار</p>
+                <span>JPG, PNG, WEBP, MP4, WEBM — حتى 60 ميجابايت</span>
+                <input type="file" id="fileInput" multiple accept="image/*,video/*" hidden>
+              </div>
+              <div class="preview-grid" id="previewGrid"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">المحافظة / المدينة <span class="required">*</span></label>
+              <input type="text" class="form-input" id="f_city" placeholder="القاهرة">
+            </div>
+            <div class="form-group">
+              <label class="form-label">رقم الهاتف <span class="required">*</span></label>
+              <input type="tel" class="form-input" id="f_phone" placeholder="01xxxxxxxxx">
+            </div>
+            <div class="form-group">
+              <label class="form-label">واتساب (اختياري)</label>
+              <input type="tel" class="form-input" id="f_whatsapp" placeholder="01xxxxxxxxx">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label class="form-label">العنوان التفصيلي (اختياري)</label>
+              <input type="text" class="form-input" id="f_address" placeholder="المنطقة، الشارع">
+            </div>
+          </div>
+          <div class="notice">
+            <i class="bi bi-info-circle"></i>
+            <p>سيتم مراجعة الإعلان من قبل الإدارة قبل النشر. يرجى التأكد من صحة البيانات.</p>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-ghost" onclick="goStep(2)"><i class="bi bi-arrow-right"></i> السابق</button>
+            <button class="btn btn-primary btn-lg" id="submitBtn"><i class="bi bi-send"></i> إرسال الإعلان للموافقة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/add-listing.js"></script>
+</body>
+</html>
+
+

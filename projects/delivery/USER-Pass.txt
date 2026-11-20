@@ -1,0 +1,20 @@
+بيانات الدخول الموحّدة للأدمن
+================================
+
+المشروع                     اسم المستخدم   كلمة المرور
+Forensic Accountant         admin           admin123
+Talabatak (Delivery)        admin           admin123
+Cafe Manager                admin           admin123
+Auto-Car                    admin           admin123
+Baraka Market               admin           admin123
+Pharmacy Pro                admin           admin123
+EduSphere                   admin           admin123
+Miftah Studio               admin           admin123
+Adala Platform              admin           admin123
+Muraqib Financial           admin           admin123
+Doctor Clinic Platform      admin           admin123
+
+ملاحظات:
+- جميع المشاريع تستخدم نفس بيانات الأدمن الموحّدة: admin / admin123.
+- غيّر كلمة المرور فور الدخول في بيئة الإنتاج.
+- لإعادة التعيين على MySQL استخدم ملف RESET-ADMIN-MYSQL.sql الخاص بكل مشروع.

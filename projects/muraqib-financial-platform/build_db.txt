@@ -1,0 +1,25 @@
+
+> muraqib-financial-platform@1.0.0 build
+> tsc -b && vite build
+
+[33m(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vite.config.ts:11:25). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.[39m
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 2227 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          0.88 kB │ gzip:   0.49 kB
+dist/assets/index--Br5mCyQ.css          35.51 kB │ gzip:   6.35 kB
+dist/assets/purify.es-Dqk5qvad.js       29.02 kB │ gzip:  11.45 kB
+dist/assets/index.es-DKCdB4PA.js       151.37 kB │ gzip:  48.88 kB
+dist/assets/html2canvas-D_-uX_CX.js    199.39 kB │ gzip:  46.73 kB
+dist/assets/index-DFckA0TB.js        1,332.43 kB │ gzip: 419.15 kB
+
+[33m[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 626ms[39m

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<title>Smart Activity Group / مجموعة الأنشطه الذكيه | نسخ تجريبية كاملة</title>
+<style>
+:root{--bg:#070b16;--card:#111a2e;--card2:#16213a;--line:#243456;--txt:#e8eefc;--muted:#9aabc9;--acc:#4f8cff;--acc2:#22d3a6}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#1b2f5c55,transparent),radial-gradient(900px 500px at 10% 10%,#0d6b6a33,transparent),var(--bg);color:var(--txt);font-family:system-ui,"Segoe UI",Tahoma,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}
+header{padding:26px 0 10px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:-.3px}
+.brand .logo{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;overflow:hidden;box-shadow:0 8px 24px #4f8cff55;flex:none}.brand .logo img{width:100%;height:100%;display:block}
+.pill{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:7px 12px;background:#0d1528}
+.owner{font-size:14px;font-weight:700;color:#d8e6ff;border:1px solid #4f8cff55;background:linear-gradient(135deg,#4f8cff18,#22d3a612);border-radius:99px;padding:8px 16px;box-shadow:0 6px 20px #4f8cff18}
+.owner::before{content:"✦";color:var(--acc2);margin-inline-end:8px;font-size:12px}
+.hero{text-align:center;padding:46px 0 30px}
+.hero .tag{display:inline-block;font-size:13px;color:var(--acc2);border:1px solid #22d3a655;background:#22d3a611;border-radius:99px;padding:6px 14px;margin-bottom:18px}
+.hero h1{font-size:clamp(28px,5vw,52px);line-height:1.2;margin:0 0 14px;letter-spacing:-1px}
+.hero h1 span{background:linear-gradient(90deg,#7db4ff,#22d3a6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:680px;margin:0 auto;color:var(--muted);line-height:1.9;font-size:15px}
+.stats{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:26px}
+.stat b{display:block;font-size:24px;color:#fff}.stat span{font-size:12px;color:var(--muted)}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:22px 0 18px}
+.search{flex:1;min-width:240px;background:#0d1528;border:1px solid var(--line);border-radius:12px;padding:12px 16px;color:var(--txt);outline:none;font-size:14px}
+.search:focus{border-color:var(--acc)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{background:#0d1528;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:8px 14px;font-size:13px;cursor:pointer}
+.filter.active,.filter:hover{background:var(--acc);border-color:var(--acc);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;padding-bottom:60px}
+.card{position:relative;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:20px;overflow:hidden;transition:.22s;display:flex;flex-direction:column;gap:12px}
+.card:hover{transform:translateY(-4px);border-color:#3c5c9e;box-shadow:0 18px 40px #0006}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--c,var(--acc))}
+.top{display:flex;align-items:center;justify-content:space-between}
+.icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:26px;background:#ffffff0d;border:1px solid #ffffff18}
+.badge{font-size:11px;padding:5px 10px;border-radius:99px;background:#22d3a615;color:var(--acc2);border:1px solid #22d3a640}
+.badge.off{background:#ef444415;color:#f87171;border-color:#ef444440}
+.card h3{margin:0;font-size:18px}.card .sub{margin:-6px 0 0;color:var(--muted);font-size:13px}
+.card p{color:var(--muted);font-size:13px;line-height:1.8;margin:0;flex:1}
+.login{font-size:12px;color:#9fb4da;background:#0a1120;border:1px dashed var(--line);border-radius:8px;padding:7px 10px;direction:ltr;text-align:left}
+.go{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--c,var(--acc));color:#fff;border-radius:10px;padding:11px;font-weight:700;font-size:14px}
+.go:hover{filter:brightness(1.12)}
+footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--muted);font-size:13px;text-align:center;line-height:1.9}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="logo"><img src="logo.svg" alt="Smart Activity Group"></div> Smart Activity Group <span style="color:var(--muted);font-weight:400;font-size:13px">/ مجموعة الأنشطه الذكيه</span></div>
+    <div class="owner">أحمد يوسف الخلالي</div>
+    <div class="pill">🟢 نسخ تجريبية تعمل بالكامل — CRUD مفعّل</div>
+  </header>
+
+  <section class="hero">
+    <span class="tag">جرّب قبل الشراء — بدون أي تكلفة أو تثبيت</span>
+    <h1>كل منصاتنا البرمجية <span>بين يديك الآن</span></h1>
+    <p>اختر المشروع الذي يهمك وادخل نسخته التجريبية فوراً. يمكنك إضافة وتعديل وحذف البيانات بحرية كاملة، وكل نسخة معزولة عن غيرها ومزوّدة ببيانات جاهزة للتجربة.</p>
+    <div class="stats">
+      <div class="stat"><b id="count">12</b><span>منصة جاهزة</span></div>
+      <div class="stat"><b>100%</b><span>وظائف كاملة</span></div>
+      <div class="stat"><b>0</b><span>تكلفة تجربة</span></div>
+    </div>
+  </section>
+
+  <div class="toolbar">
+    <input id="search" class="search" placeholder="🔎 ابحث عن اسم المشروع أو نوعه...">
+    <div class="filters" id="filters"></div>
+  </div>
+
+  <main class="grid" id="grid"></main>
+
+  <footer>
+    جميع النسخ التجريبية مخصصة للعرض فقط — تُعاد بياناتها إلى الحالة الأصلية عند الضغط على «إعادة ضبط البيانات».<br>
+    للاستفسارات وطلبات التخصيص، تواصل معنا مباشرة: <a href="tel:01000762462" dir="ltr" style="color:var(--acc2);font-weight:700">01000762462</a><br>
+    © Smart Activity Group / مجموعة الأنشطه الذكيه — أحمد يوسف الخلالي
+  </footer>
+</div>
+
+<script>
+const grid=document.getElementById('grid'),search=document.getElementById('search'),filters=document.getElementById('filters');
+let projects=[],active='الكل';
+const cats=['الكل','تجاري','خدمات','تعليم','مالي','تقني','طبي','قانوني'];
+cats.forEach(c=>{const b=document.createElement('button');b.className='filter'+(c===active?' active':'');b.textContent=c;b.onclick=()=>{active=c;[...filters.children].forEach(x=>x.classList.toggle('active',x===b));render()};filters.appendChild(b)});
+
+async function load(){
+  try{
+    const r=await fetch('/__demo/info');const j=await r.json();projects=j.projects;
+    document.getElementById('count').textContent=projects.length;
+    render();poll();
+  }catch(e){grid.innerHTML='<div class="empty">تعذّر تحميل قائمة الديمو. تأكد من تشغيل الخادم.</div>'}
+}
+function render(){
+  const q=search.value.trim().toLowerCase();
+  const list=projects.filter(p=>(active==='الكل'||p.category===active)&&(!q||(p.label+' '+p.subtitle+' '+p.id).toLowerCase().includes(q)));
+  grid.innerHTML=list.length?list.map(p=>`
+    <article class="card" style="--c:${p.color}">
+      <div class="top"><div class="icon">${p.icon}</div><span class="badge off" data-badge="${p.id}">● جاري الفحص</span></div>
+      <h3>${p.label}</h3><p class="sub">${p.subtitle}</p>
+      <p>${p.description||''}</p>
+      <div class="login">👤 ${p.login}</div>
+      <a class="go" href="/${p.id}/" target="_blank">افتح النسخة التجريبية ←</a>
+    </article>`).join(''):'<div class="empty">لا توجد نتائج مطابقة.</div>';
+}
+async function poll(){
+  try{
+    const ids=projects.map(p=>p.id).join(',');
+    const r=await fetch('/__demo/health?ids='+encodeURIComponent(ids));const j=await r.json();
+    Object.entries(j.projects||{}).forEach(([id,s])=>{
+      document.querySelectorAll('[data-badge="'+id+'"]').forEach(b=>{b.classList.toggle('off',!s.online);b.textContent=s.online?'● متصل الآن':'● غير متصل'});
+    });
+  }catch(e){}
+  setTimeout(poll,12000);
+}
+search.addEventListener('input',render);
+load();
+</script>
+</body>
+</html>

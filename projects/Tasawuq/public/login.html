@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول - تسوق</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{var t=localStorage.getItem('ts_theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <style>
+    .auth-page {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, var(--primary-glow), transparent 70%),
+        var(--bg);
+    }
+    .auth-orb { position: fixed; border-radius: 50%; filter: blur(90px); opacity: .35; pointer-events: none; }
+    .auth-orb.a { width: 380px; height: 380px; background: #6366f1; top: -140px; right: -100px; }
+    .auth-orb.b { width: 340px; height: 340px; background: #06b6d4; bottom: -140px; left: -110px; }
+
+    .auth-card {
+      position: relative;
+      width: 100%;
+      max-width: 460px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      animation: fadeUp .45s ease;
+    }
+    .auth-header { text-align: center; padding: 2.25rem 2rem 1.25rem; }
+    .auth-mark {
+      width: 62px; height: 62px;
+      margin: 0 auto .875rem;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 18px;
+      background: var(--gradient);
+      font-size: 1.9rem;
+      box-shadow: 0 12px 30px var(--primary-glow);
+    }
+    .auth-header h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; }
+    .auth-header p { color: var(--text-2); margin-top: .25rem; font-size: .95rem; }
+
+    .auth-tabs { display: flex; gap: .375rem; padding: .375rem; margin: 0 1.5rem 1.25rem; background: var(--surface-2); border-radius: 14px; }
+    .auth-tab {
+      flex: 1; padding: .75rem; border: none; border-radius: 10px;
+      background: none; color: var(--text-2); font-weight: 700; cursor: pointer;
+      transition: var(--transition);
+    }
+    .auth-tab.active { background: var(--surface); color: var(--primary); box-shadow: var(--shadow); }
+
+    .auth-body { padding: 0 2rem 2rem; }
+    .form-group { margin-bottom: 1.125rem; }
+    .form-label { display: block; margin-bottom: .5rem; font-weight: 600; font-size: .95rem; }
+    .form-input {
+      width: 100%; padding: .875rem 1rem;
+      border: 1px solid var(--border); border-radius: 12px;
+      background: var(--surface-2); color: var(--text);
+      outline: none; transition: var(--transition);
+    }
+    .form-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); background: var(--surface); }
+    .input-group { position: relative; }
+    .input-group i { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 1.05rem; }
+    .input-group .form-input { padding-right: 2.75rem; }
+    .input-group .toggle-pass {
+      position: absolute;
+      left: .5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      border-radius: 8px;
+      transition: var(--transition);
+      z-index: 2;
+    }
+    .input-group .toggle-pass:hover { color: var(--primary); background: var(--primary-glow); }
+    .input-group .toggle-pass i { font-size: 1.1rem; pointer-events: none; }
+    .input-group.has-toggle .form-input { padding-left: 2.75rem; }
+
+    .alert { display: none; align-items: center; gap: .5rem; padding: .875rem 1rem; border-radius: 12px; margin-bottom: 1rem; font-size: .9rem; font-weight: 600; }
+    .alert.error { display: flex; background: rgba(239,68,68,.1); color: #ef4444; }
+    .alert.success { display: flex; background: rgba(34,197,94,.12); color: #16a34a; }
+
+    .btn-submit { width: 100%; justify-content: center; padding: .95rem; border-radius: 12px; font-size: 1rem; }
+    .btn-submit:disabled { opacity: .65; cursor: not-allowed; transform: none; }
+
+    .auth-back { text-align: center; margin-top: 1.5rem; }
+    .auth-back a { color: var(--text-2); font-weight: 500; transition: var(--transition); }
+    .auth-back a:hover { color: var(--primary); }
+
+    .demo-box {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      background: var(--surface-2);
+    }
+    .demo-box h4 { font-size: .85rem; color: var(--text-2); font-weight: 700; margin-bottom: .625rem; display: flex; align-items: center; gap: .375rem; }
+    .demo-chips { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .demo-chip {
+      flex: 1;
+      min-width: 140px;
+      padding: .5rem .75rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-2);
+      font-size: .8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+    .demo-chip:hover { border-color: var(--primary); color: var(--primary); }
+
+    @media (max-width: 480px) {
+      .auth-header { padding: 1.75rem 1.25rem 1rem; }
+      .auth-body { padding: 0 1.25rem 1.75rem; }
+      .auth-tabs { margin: 0 1.25rem 1.125rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-orb a"></div>
+  <div class="auth-orb b"></div>
+  <div class="auth-page">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-mark">🏠</div>
+        <h1>تسوق <span class="gradient-text"></span></h1>
+        <p>مرحبًا بك، سجّل دخولك للمتابعة</p>
+      </div>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">تسجيل الدخول</button>
+        <button class="auth-tab" data-tab="register">حساب جديد</button>
+      </div>
+
+      <div class="auth-body">
+        <!-- LOGIN -->
+        <div id="loginForm">
+          <div class="alert" id="loginAlert"></div>
+          <div class="form-group">
+            <label class="form-label">رقم الهاتف أو البريد الإلكتروني</label>
+            <div class="input-group">
+              <i class="bi bi-person"></i>
+              <input type="text" class="form-input" id="loginPhone" placeholder="01xxxxxxxxx أو example@mail.com" autocomplete="username">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">كلمة المرور</label>
+            <div class="input-group has-toggle">
+              <i class="bi bi-lock"></i>
+              <input type="password" class="form-input" id="loginPass" placeholder="••••••••" autocomplete="current-password">
+              <button type="button" class="toggle-pass" data-target="loginPass" aria-label="إظهار كلمة المرور"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-submit" id="loginBtn">
+            <i class="bi bi-box-arrow-in-right"></i> تسجيل الدخول
+          </button>
+
+          <div class="demo-box">
+            <h4><i class="bi bi-stars"></i> دخول سريع للتجربة</h4>
+            <div class="demo-chips">
+              <button type="button" class="demo-chip" data-demo="admin">👑 حساب المدير</button>
+              <button type="button" class="demo-chip" data-demo="shopper">🛒 حساب متسوق (أحمد)</button>
+            </div>
+            <p style="margin:.6rem 0 0;color:var(--muted);font-size:.78rem">المتسوق: <b dir="ltr">ahmed@demo.com</b> / <b dir="ltr">admin123</b></p>
+          </div>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="registerForm" style="display:none">
+          <div class="alert" id="regAlert"></div>
+          <div class="form-group">
+            <label class="form-label">الاسم الكامل</label>
+            <div class="input-group">
+              <i class="bi bi-person"></i>
+              <input type="text" class="form-input" id="regName" placeholder="أدخل اسمك الكامل">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">رقم الهاتف</label>
+            <div class="input-group">
+              <i class="bi bi-phone"></i>
+              <input type="tel" class="form-input" id="regPhone" placeholder="01xxxxxxxxx">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">البريد الإلكتروني (اختياري)</label>
+            <div class="input-group">
+              <i class="bi bi-envelope"></i>
+              <input type="email" class="form-input" id="regEmail" placeholder="example@mail.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">كلمة المرور</label>
+            <div class="input-group has-toggle">
+              <i class="bi bi-lock"></i>
+              <input type="password" class="form-input" id="regPass" placeholder="6 أحرف على الأقل">
+              <button type="button" class="toggle-pass" data-target="regPass" aria-label="إظهار كلمة المرور"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">المحافظة / المدينة</label>
+            <div class="input-group">
+              <i class="bi bi-geo-alt"></i>
+              <input type="text" class="form-input" id="regCity" placeholder="القاهرة">
+            </div>
+          </div>
+          <button class="btn btn-primary btn-submit" id="regBtn">
+            <i class="bi bi-person-plus"></i> إنشاء حساب
+          </button>
+        </div>
+
+        <div class="auth-back">
+          <a href="/"><i class="bi bi-arrow-right"></i> العودة للرئيسية</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Password show/hide toggle
+    document.querySelectorAll('.toggle-pass').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = document.getElementById(btn.dataset.target);
+        if (!input) return;
+        const isPass = input.type === 'password';
+        input.type = isPass ? 'text' : 'password';
+        const icon = btn.querySelector('i');
+        icon.className = isPass ? 'bi bi-eye-slash' : 'bi bi-eye';
+        btn.setAttribute('aria-label', isPass ? 'إخفاء كلمة المرور' : 'إظهار كلمة المرور');
+        btn.style.color = isPass ? 'var(--primary)' : 'var(--muted)';
+      });
+    });
+
+    const tabs = document.querySelectorAll('.auth-tab');
+    tabs.forEach(t => t.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('loginForm').style.display = t.dataset.tab === 'login' ? 'block' : 'none';
+      document.getElementById('registerForm').style.display = t.dataset.tab === 'register' ? 'block' : 'none';
+    }));
+
+    const nextParam = new URLSearchParams(location.search).get('next');
+    function afterLogin(u) {
+      if (nextParam) { location.href = nextParam; return; }
+      if (u && (u.role === 'admin' || u.role === 'moderator')) { location.href = '/admin.html'; return; }
+      location.href = '/site/';
+    }
+
+    async function doLogin() {
+      const ident = document.getElementById('loginPhone').value.trim();
+      const password = document.getElementById('loginPass').value;
+      const alert = document.getElementById('loginAlert');
+      const btn = document.getElementById('loginBtn');
+      if (!ident || !password) {
+        alert.className = 'alert error';
+        alert.innerHTML = '<i class="bi bi-exclamation-circle"></i> يرجى إدخال جميع البيانات';
+        return;
+      }
+      alert.className = 'alert'; alert.innerHTML = '';
+      btn.disabled = true;
+      const original = btn.innerHTML;
+      btn.innerHTML = '<i class="bi bi-hourglass-split"></i> جاري التحقق...';
+      try {
+        // السيرفر يقبل الهاتف أو البريد في نفس الحقل
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: ident, email: ident, password })
+        });
+        const d = await res.json();
+        if (!res.ok) {
+          alert.className = 'alert error';
+          alert.innerHTML = '<i class="bi bi-exclamation-circle"></i> ' + (d.error || 'بيانات الدخول غير صحيحة');
+          btn.disabled = false; btn.innerHTML = original;
+          return;
+        }
+        localStorage.setItem('ts_token', d.token);
+        localStorage.setItem('ts_user', JSON.stringify(d.user));
+        alert.className = 'alert success';
+        alert.innerHTML = '<i class="bi bi-check-circle"></i> تم تسجيل الدخول بنجاح، جاري التحويل...';
+        setTimeout(() => afterLogin(d.user), 600);
+      } catch (e) {
+        alert.className = 'alert error';
+        alert.innerHTML = '<i class="bi bi-exclamation-circle"></i> خطأ في الاتصال بالسيرفر';
+        btn.disabled = false; btn.innerHTML = original;
+      }
+    }
+
+    document.getElementById('loginBtn').addEventListener('click', doLogin);
+    ['loginPhone', 'loginPass'].forEach(id => {
+      document.getElementById(id).addEventListener('keypress', e => { if (e.key === 'Enter') doLogin(); });
+    });
+
+    // Quick demo login
+    document.querySelectorAll('.demo-chip').forEach(chip => {
+      chip.addEventListener('click', async () => {
+        const type = chip.dataset.demo;
+        const creds = type === 'admin'
+          ? { phone: 'admin', password: 'admin123' }
+          : { phone: 'ahmed@demo.com', password: 'admin123' }; // متسوق تجريبي
+        document.getElementById('loginPhone').value = creds.phone;
+        document.getElementById('loginPass').value = creds.password;
+        const alert = document.getElementById('loginAlert');
+        alert.className = 'alert';
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(creds)
+        });
+        const d = await res.json();
+        if (res.ok) {
+          localStorage.setItem('ts_token', d.token);
+          localStorage.setItem('ts_user', JSON.stringify(d.user));
+          afterLogin(d.user);
+        } else {
+          alert.className = 'alert error';
+          alert.innerHTML = '<i class="bi bi-exclamation-circle"></i> ' + (d.error || 'تعذر الدخول التجريبي');
+        }
+      });
+    });
+
+    const regBtn = document.getElementById('regBtn');
+    regBtn.addEventListener('click', async () => {
+      const name = document.getElementById('regName').value.trim();
+      const phone = document.getElementById('regPhone').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPass').value;
+      const city = document.getElementById('regCity').value.trim();
+      const alert = document.getElementById('regAlert');
+      if (!name || !phone || !password) {
+        alert.className = 'alert error';
+        alert.innerHTML = '<i class="bi bi-exclamation-circle"></i> يرجى إدخال الاسم ورقم الهاتف وكلمة المرور';
+        return;
+      }
+      regBtn.disabled = true;
+      const original = regBtn.innerHTML;
+      regBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> جاري الإنشاء...';
+      try {
+        const res = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, phone, email, password, city })
+        });
+        const d = await res.json();
+        if (!res.ok) {
+          alert.className = 'alert error';
+          alert.innerHTML = '<i class="bi bi-exclamation-circle"></i> ' + (d.error || 'حدث خطأ');
+          regBtn.disabled = false; regBtn.innerHTML = original;
+          return;
+        }
+        localStorage.setItem('ts_token', d.token);
+        localStorage.setItem('ts_user', JSON.stringify(d.user));
+        alert.className = 'alert success';
+        alert.innerHTML = '<i class="bi bi-check-circle"></i> تم إنشاء الحساب بنجاح، جاري التحويل...';
+        setTimeout(() => afterLogin(d.user), 700);
+      } catch (e) {
+        alert.className = 'alert error';
+        alert.innerHTML = '<i class="bi bi-exclamation-circle"></i> خطأ في الاتصال';
+        regBtn.disabled = false; regBtn.innerHTML = original;
+      }
+    });
+    document.getElementById('regPass').addEventListener('keypress', e => { if (e.key === 'Enter') regBtn.click(); });
+  </script>
+</body>
+</html>
+

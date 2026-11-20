@@ -1,0 +1,14 @@
+{
+  "name": "Auto Car — أوتو كار للسيارات",
+  "short_name": "Auto Car",
+  "description": "نظام إدارة معرض سيارات متكامل مع ERP محاسبي",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1f3a",
+  "theme_color": "#0b1f3a",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    { "src": "/assets/img/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

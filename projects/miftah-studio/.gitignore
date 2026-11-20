@@ -1,0 +1,11 @@
+node_modules/
+dist/
+data/
+keys/
+backups/
+shots/
+*.tsbuildinfo
+*.log
+*.error.log
+.DS_Store
+Thumbs.db

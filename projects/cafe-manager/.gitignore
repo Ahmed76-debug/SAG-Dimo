@@ -1,0 +1,17 @@
+node_modules
+cafe.db
+cafe.db-shm
+cafe.db-wal
+cafe-*.db
+cafe-*.db-shm
+cafe-*.db-wal
+*-test.db
+*-test.db-shm
+*-test.db-wal
+.port
+.env
+backup-*.json
+cafe-manager-mobile/www
+cafe-manager-desktop/node_modules
+license-keys/
+license-output/

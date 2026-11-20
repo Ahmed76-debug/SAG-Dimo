@@ -1,0 +1,17 @@
+{
+  "name": "baraka-market",
+  "version": "1.0.0",
+  "private": true,
+  "description": "سوق البركة — نظام ERP وكاشير احترافي لسوبر ماركت وخضروات ولحوم (Node.js + SQLite، بدون تبعيات خارجية)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "backup": "node scripts/backup-cli.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "keywords": ["erp", "pos", "supermarket", "grocery", "sqlite", "arabic", "rtl"],
+  "license": "MIT"
+}

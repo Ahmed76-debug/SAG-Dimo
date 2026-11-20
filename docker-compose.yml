@@ -1,0 +1,11 @@
+services:
+  demo-suite:
+    build: .
+    container_name: demo-suite
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - NODE_ENV=production
+      - DEMO_PORT=8000
+      - DEMO_HOST=0.0.0.0

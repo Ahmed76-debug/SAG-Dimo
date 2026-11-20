@@ -1,0 +1,5 @@
+اسم المستخدم     	كلمة المرور	     الدور	               الصلاحيات
+admin	                admin123         مدير النظام	             كل الصلاحيات (*)
+accountant	       account123	  محاسب   	accounting, reports, customers, suppliers, vehicles.view
+sales	                sales123	  مبيعات	       sales, vehicles, customers, installments
+(ملاحظة: الحساب الموحّد هو admin / admin123 لكل المشروعات)

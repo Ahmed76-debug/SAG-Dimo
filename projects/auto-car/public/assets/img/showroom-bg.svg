@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" fill="none">
+  <defs>
+    <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="coneA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== واجهة المعرض الزجاجية ===== -->
+  <g stroke="#ffffff" stroke-opacity=".12" stroke-width="2">
+    <path d="M40 130 H1160"/>
+    <path d="M40 130 V74 L600 24 L1160 74 V130"/>
+    <path d="M200 62 V130 M400 44 V130 M600 34 V130 M800 44 V130 M1000 62 V130"/>
+    <path d="M40 130 V660 M1160 130 V660"/>
+    <path d="M40 300 H1160" stroke-opacity=".07"/>
+  </g>
+
+  <!-- ===== كشافات الإضاءة ===== -->
+  <g>
+    <g transform="translate(320,130)">
+      <rect x="-28" y="-11" width="56" height="15" rx="5" fill="#ffffff" fill-opacity=".16"/>
+      <path d="M-23 6 L-150 380 L150 380 L23 6 Z" fill="url(#cone)"/>
+    </g>
+    <g transform="translate(600,130)">
+      <rect x="-32" y="-11" width="64" height="16" rx="5" fill="#ffffff" fill-opacity=".2"/>
+      <path d="M-27 6 L-185 420 L185 420 L27 6 Z" fill="url(#coneA)"/>
+    </g>
+    <g transform="translate(880,130)">
+      <rect x="-28" y="-11" width="56" height="15" rx="5" fill="#ffffff" fill-opacity=".16"/>
+      <path d="M-23 6 L-150 380 L150 380 L23 6 Z" fill="url(#cone)"/>
+    </g>
+  </g>
+
+  <!-- ===== الأرضية ===== -->
+  <path d="M0 470 H1200 V700 H0 Z" fill="url(#floor)"/>
+  <g stroke="#ffffff" stroke-opacity=".09" stroke-width="1.5">
+    <path d="M0 500 H1200 M0 542 H1200 M0 592 H1200 M0 652 H1200"/>
+    <path d="M600 470 L120 700 M600 470 L1080 700 M600 470 V700"/>
+  </g>
+</svg>

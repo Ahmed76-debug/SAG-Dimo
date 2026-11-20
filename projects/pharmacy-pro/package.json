@@ -1,0 +1,14 @@
+{
+  "name": "pharmapro",
+  "version": "1.0.0",
+  "description": "PharmaPro – منصة إدارة الصيدلية الذكية (نقطة بيع، مخزون، موردين، حسابات، تقارير، ورديات)",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "node server/app.js --port=4173"
+  },
+  "keywords": ["pharmacy", "pos", "erp", "inventory", "sqlite"],
+  "author": "PharmaPro",
+  "license": "MIT",
+  "engines": { "node": ">=22.5" }
+}

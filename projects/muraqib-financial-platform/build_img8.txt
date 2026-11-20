@@ -1,0 +1,10 @@
+
+> muraqib-financial-platform@1.0.0 build
+> tsc -b && vite build
+
+src/pages/portfolio/PortfolioPage.tsx(25,8): error TS17008: JSX element 'section' has no corresponding closing tag.
+src/pages/portfolio/PortfolioPage.tsx(101,9): error TS1005: ')' expected.
+src/pages/portfolio/PortfolioPage.tsx(102,7): error TS1109: Expression expected.
+src/pages/portfolio/PortfolioPage.tsx(131,10): error TS17008: JSX element 'div' has no corresponding closing tag.
+src/pages/portfolio/PortfolioPage.tsx(164,5): error TS1128: Declaration or statement expected.
+src/pages/portfolio/PortfolioPage.tsx(165,3): error TS1109: Expression expected.

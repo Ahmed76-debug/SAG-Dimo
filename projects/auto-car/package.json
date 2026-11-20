@@ -1,0 +1,18 @@
+{
+  "name": "auto-car",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Auto Car — نظام إدارة معرض سيارات متكامل (بيع وشراء جديد ومستعمل، كاش وتقسيط، بيع بالعمولة) مع ERP محاسبي شامل وعملات ونسخ احتياطي وثنائية اللغة.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "backup": "node scripts/backup-cli.js",
+    "test": "node scripts/smoke.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "keywords": ["car-showroom", "erp", "accounting", "installments", "consignment", "sqlite", "arabic", "rtl", "i18n"],
+  "license": "UNLICENSED"
+}

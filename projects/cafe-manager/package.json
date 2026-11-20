@@ -1,0 +1,24 @@
+{
+  "name": "cafe-manager",
+  "version": "2.0.0",
+  "description": "كافيه برو — نظام إدارة كافيه متكامل (مبيعات، مشتريات، مخزون، محاسبة، شيفتات، فروع، صلاحيات)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test-api.js",
+    "db:schema": "node scripts/schema-mysql.js",
+    "sync:mysql": "node scripts/sync-sqlite-to-mysql.js"
+  },
+  "keywords": ["cafe", "pos", "accounting", "express", "sqlite", "mysql", "mariadb"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.11.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

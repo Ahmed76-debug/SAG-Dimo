@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f766e">
+<title>كافيه برو</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login-screen" class="login-screen">
+  <form id="login-form" class="login-box">
+    <h2>☕ كافيه برو</h2>
+    <p class="muted">تسجيل الدخول</p>
+    <input id="login-user" placeholder="اسم الدخول" required>
+    <div style="position:relative"><input id="login-pass" type="password" placeholder="كلمة المرور" required style="padding-inline-end:42px"><button type="button" id="toggle-login-pass" style="position:absolute;inset-inline-end:8px;top:50%;transform:translateY(-50%);border:0;background:transparent;cursor:pointer;font-size:16px" aria-label="إظهار كلمة المرور">👁</button></div>
+    <button class="btn primary" style="width:100%">دخول</button>
+    <p id="login-error" class="error"></p>
+    <p class="muted" style="font-size:12px;margin-top:10px;text-align:center">مدير النظام: <b>admin</b> / <b>admin123</b></p>
+  </form>
+</div>
+
+<div class="layout" id="main-layout" style="display:none">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">☕ كافيه برو</div>
+    <nav id="nav"></nav>
+    <button class="nav-btn logout" id="logout-btn">🚪 خروج</button>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="content">
+    <header class="topbar">
+      <button id="menu-btn">☰</button>
+      <h1 id="page-title">الرئيسية</h1>
+      <button class="chip" id="theme-btn" title="معرض الثيمات" aria-label="معرض الثيمات" style="cursor:pointer;border:none;display:inline-grid;place-items:center">🎨</button>
+      <div class="chips">
+        <select class="chip" id="branch-select" style="background:var(--hover);border:none;cursor:pointer;width:auto"></select>
+        <span class="chip" id="shift-chip">بدون شيفت</span>
+        <span class="chip" id="user-chip"></span>
+      </div>
+    </header>
+
+    <section class="page active" id="page-dashboard">
+      <div class="cards">
+        <div class="card"><span>المبيعات</span><b id="kpi-sales">0</b></div>
+        <div class="card"><span>الفواتير</span><b id="kpi-invoices">0</b></div>
+        <div class="card"><span>المشتريات</span><b id="kpi-purchases">0</b></div>
+        <div class="card accent"><span>صافي الدخل</span><b id="kpi-profit">0</b></div>
+      </div>
+      <div class="panel"><h2>المبيعات — آخر 7 أيام</h2><canvas id="sales-chart" height="240"></canvas></div>
+    </section>
+
+    <section class="page" id="page-shifts">
+      <div class="panel"><h2>إدارة الشيفت</h2>
+        <form id="shift-form" class="grid-form">
+          <input id="shift-cash" type="number" placeholder="المبلغ (نقدية البداية/النهاية)" required>
+          <button class="btn primary" id="shift-open-btn" type="button">فتح شيفت</button>
+          <button class="btn danger" id="shift-close-btn" type="button">إغلاق الشيفت</button>
+        </form>
+      </div>
+      <div class="panel"><h2>سجل الشيفتات</h2>
+        <table><thead><tr><th>الكاشير</th><th>البداية</th><th>النهاية</th><th>نقدية البداية</th><th>نقدية النهاية</th><th>الحالة</th></tr></thead>
+        <tbody id="shifts-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-users">
+      <div class="panel"><h2>إضافة / تعديل مستخدم</h2>
+        <form id="user-form" class="grid-form">
+          <input type="hidden" id="user-id">
+          <input id="user-name" placeholder="الاسم" required>
+          <input id="user-username" placeholder="اسم الدخول" required>
+          <input id="user-pass" type="password" placeholder="كلمة المرور">
+          <select id="user-role"><option>مدير</option><option>كاشير</option><option>مشرف</option></select>
+          <div class="perms-matrix" id="perms-matrix"></div>
+          <button class="btn primary">حفظ</button>
+        </form>
+      </div>
+      <div class="panel"><h2>المستخدمون</h2>
+        <table><thead><tr><th>الاسم</th><th>الدخول</th><th>الدور</th><th>إجراءات</th></tr></thead><tbody id="users-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-accounts">
+      <div class="panel"><h2>إضافة حساب (دليل الحسابات)</h2>
+        <form id="account-form" class="grid-form">
+          <input id="acc-name" placeholder="اسم الحساب" required>
+          <select id="acc-type"><option>أصول</option><option>خصوم</option><option>حقوق ملكية</option><option>إيرادات</option><option>مصروفات</option></select>
+          <button class="btn primary">إضافة</button>
+        </form>
+      </div>
+      <div class="panel"><h2>الحسابات</h2>
+        <table><thead><tr><th>الحساب</th><th>النوع</th><th>إجراءات</th></tr></thead><tbody id="accounts-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-journal">
+      <div class="panel"><h2>قيد يومية يدوي</h2>
+        <form id="journal-form" class="grid-form">
+          <input id="j-desc" placeholder="البيان" required>
+          <select id="j-acc1" class="j-acc"></select><input id="j-d1" type="number" placeholder="مدين">
+          <select id="j-acc2" class="j-acc"></select><input id="j-c2" type="number" placeholder="دائن">
+          <button class="btn primary">ترحيل القيد</button>
+        </form>
+      </div>
+      <div class="panel"><h2>دفتر القيود</h2>
+        <table><thead><tr><th>التاريخ</th><th>المرجع</th><th>البيان</th><th>الحساب</th><th>مدين</th><th>دائن</th></tr></thead>
+        <tbody id="journal-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-suppliers">
+      <div class="panel"><h2>إضافة مورد</h2>
+        <form id="supplier-form" class="grid-form">
+          <input type="hidden" id="supplier-id"><input id="supplier-name" placeholder="الاسم" required>
+          <input id="supplier-phone" placeholder="الهاتف"><input id="supplier-address" placeholder="العنوان">
+          <button class="btn primary">حفظ</button>
+        </form>
+      </div>
+      <div class="panel"><h2>الموردون</h2>
+        <table><thead><tr><th>الاسم</th><th>الهاتف</th><th>العنوان</th><th>إجراءات</th></tr></thead><tbody id="suppliers-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-purchases">
+      <div class="panel"><h2>فاتورة مشتريات</h2>
+        <form id="purchase-form" class="grid-form">
+          <select id="purchase-supplier"></select><select id="purchase-item"></select>
+          <input id="purchase-barcode" placeholder="🔍 مسح الباركود" oninput="barcodeLookup()">
+          <input id="purchase-qty" type="number" placeholder="الكمية" required><input id="purchase-price" type="number" step="0.01" placeholder="سعر الوحدة" required>
+          <input id="purchase-date" type="date"><button class="btn primary">إضافة</button>
+        </form>
+      </div>
+      <div class="panel"><h2>سجل المشتريات</h2>
+        <table><thead><tr><th>المورد</th><th>الصنف</th><th>الكمية</th><th>الإجمالي</th><th>التاريخ</th><th></th></tr></thead><tbody id="purchases-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-sales">
+      <div class="panel"><h2>فاتورة بيع</h2>
+        <form id="sale-form" class="grid-form">
+          <input id="sale-customer" placeholder="العميل">
+          <select id="sale-item" required><option value="">اختر الصنف</option></select>
+          <input id="sale-qty" type="number" min="1" placeholder="الكمية" required>
+          <input id="sale-price" type="number" step="0.01" placeholder="السعر" required>
+          <select id="sale-payment"><option>نقدي</option><option>بطاقة</option><option>تطبيق</option></select>
+          <button class="btn primary">إضافة</button>
+        </form>
+      </div>
+      <div class="panel"><h2>سجل المبيعات</h2>
+        <table><thead><tr><th>العميل</th><th>الصنف</th><th>الكمية</th><th>الإجمالي</th><th>الدفع</th><th>التاريخ</th><th></th></tr></thead><tbody id="sales-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-finance">
+      <div class="cards">
+        <div class="card ok"><span>الإيرادات</span><b id="fin-revenue">0</b></div>
+        <div class="card bad"><span>المصروفات</span><b id="fin-expense">0</b></div>
+        <div class="card info"><span>صافي الدخل</span><b id="fin-net">0</b></div>
+      </div>
+      <div class="panel"><h2>قيد مالي</h2>
+        <form id="expense-form" class="grid-form">
+          <input id="exp-desc" placeholder="الوصف" required><input id="exp-amount" type="number" step="0.01" placeholder="المبلغ" required>
+          <select id="exp-type"><option value="expense">مصروف</option><option value="revenue">إيراد</option></select>
+          <button class="btn primary">تسجيل</button>
+        </form>
+      </div>
+      <div class="panel"><h2>كشف الحساب</h2>
+        <table><thead><tr><th>النوع</th><th>الوصف</th><th>المبلغ</th><th>التاريخ</th><th></th></tr></thead><tbody id="finance-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-tables">
+      <div class="panel"><h2>إضافة طاولة</h2>
+        <form id="table-form" class="grid-form"><input id="table-name" placeholder="اسم/رقم الطاولة" required><button class="btn primary">إضافة</button></form>
+      </div>
+      <div class="panel"><h2>الطاولات</h2><div class="tables-grid" id="tables-grid"></div></div>
+      <div class="panel" id="order-panel" style="display:none">
+        <h2 id="order-title">الأوردر</h2>
+        <div class="grid-form" style="margin-bottom:12px">
+          <select id="ord-item"></select>
+          <input id="ord-qty" type="number" min="1" value="1" placeholder="الكمية">
+          <button class="btn primary" onclick="addOrderItem()">إضافة للطلب</button>
+        </div>
+        <table><thead><tr><th>الصنف</th><th>الكمية</th><th>السعر</th><th>الإجمالي</th><th></th></tr></thead><tbody id="order-items"></tbody></table>
+        <h3 style="margin:12px 0" id="order-total"></h3>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
+          <select id="ord-payment" style="width:200px"><option>نقدي</option><option>بطاقة</option><option>تطبيق</option></select>
+          <button class="btn danger" onclick="cancelOrder()">إلغاء الطلب وإفراغ الطاولة</button>
+        </div>
+        <div style="margin:12px 0;padding:10px;background:var(--field);border-radius:10px">
+          <b>🔀 نقل الأوردر لطاولة أخرى:</b>
+          <select id="transfer-table" style="width:200px;display:inline-block;margin-right:8px"></select>
+          <button class="btn small" onclick="transferOrder()">نقل</button>
+        </div>
+        <div style="margin:12px 0;padding:10px;background:var(--field);border-radius:10px">
+          <b>✂️ تقسيم الفاتورة:</b> علّم الأصناف المراد دفعها الآن:
+          <div id="split-items" style="margin:8px 0"></div>
+          <button class="btn small primary" onclick="splitPay()">💳 دفع الأصناف المختارة</button>
+        </div>
+        <button class="btn primary" onclick="closeOrder()">💳 محاسبة وإغلاق الطاولة</button>
+      </div>
+    </section>
+
+    <section class="page" id="page-pos">
+      <div class="pos-wrap">
+        <div class="pos-grid" id="pos-grid"></div>
+        <div class="pos-cart">
+          <h2>🧾 الفاتورة</h2>
+          <div id="pos-lines"></div>
+          <h3 id="pos-total" style="margin:12px 0">الإجمالي: 0</h3>
+          <select id="pos-payment"><option>نقدي</option><option>بطاقة</option><option>تطبيق</option></select>
+          <button class="btn primary" style="width:100%" onclick="posConfirm()">✅ إتمام البيع</button>
+          <button class="btn" style="width:100%" onclick="printCurrentCart()">🖨️ طباعة الطلب</button>
+          <button class="btn danger" style="width:100%" onclick="posClear()">🗑️ مسح</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-items">
+      <div class="panel"><h2>إضافة صنف</h2>
+        <form id="item-form" class="grid-form">
+          <input id="it-name" placeholder="الاسم" required>
+          <select id="it-type"><option value="menu">صنف مباع</option><option value="ingredient">مكون</option></select>
+          <input id="it-cost" type="number" step="0.01" placeholder="تكلفة الوحدة">
+          <input id="it-sell" type="number" step="0.01" placeholder="سعر البيع">
+          <input id="it-barcode" placeholder="الباركود (اختياري)">
+          <button class="btn primary">إضافة</button>
+        </form>
+      </div>
+      <div class="panel"><h2>ربط وصفة (صنف → مكونات)</h2>
+        <form id="recipe-form" class="grid-form">
+          <select id="rc-menu"></select><select id="rc-ing"></select>
+          <input id="rc-qty" type="number" step="0.001" placeholder="الكمية" required>
+          <button class="btn primary">إضافة</button>
+        </form>
+      </div>
+      <div class="panel"><h2>الأصناف</h2>
+        <table><thead><tr><th>الاسم</th><th>النوع</th><th>التكلفة</th><th>سعر البيع</th><th>الباركود</th><th></th></tr></thead><tbody id="items-table"></tbody></table>
+      </div>
+      <div class="panel"><h2>الوصفات</h2>
+        <table><thead><tr><th>الصنف</th><th>المكون</th><th>الكمية</th><th></th></tr></thead><tbody id="recipes-table"></tbody></table>
+      </div>
+    </section>
+
+    <section class="page" id="page-reports">
+      <div class="panel"><h2>قائمة الدخل <button class="btn small" onclick="printReport('income-statement','قائمة الدخل')">🖨️</button></h2><div id="income-statement"></div></div>
+      <div class="panel"><h2>الميزانية العمومية <button class="btn small" onclick="printReport('balance-sheet','الميزانية العمومية')">🖨️</button></h2><div id="balance-sheet"></div></div>
+      <div class="panel"><h2>قائمة حقوق الملكية <button class="btn small" onclick="printReport('equity-statement','قائمة حقوق الملكية')">🖨️</button></h2><div id="equity-statement"></div></div>
+      <div class="panel"><h2>جرد وسائل الدفع <button class="btn small" onclick="printReport('pay-report','جرد وسائل الدفع')">🖨️</button></h2><div id="pay-report"></div></div>
+      <div class="panel"><h2>أرباح وخسائر تفصيلي <button class="btn small" onclick="printReport('pl-report','أرباح وخسائر')">🖨️</button></h2><div id="pl-report"></div></div>
+      <div class="panel"><h2>تقرير مخزون تفصيلي <button class="btn small" onclick="printReport('inv-report','تقرير المخزون')">🖨️</button></h2><div id="inv-report"></div></div>
+      <div class="panel"><h2>كشف شيفت تفصيلي <button class="btn small" onclick="printReport('shift-report','كشف شيفت')">🖨️</button></h2>
+        <select id="shift-select" onchange="loadShiftReport()"></select><div id="shift-report" style="margin-top:12px"></div></div>
+      <div class="panel">
+        <button class="btn" onclick="exportCSV('sales','المبيعات')">📄 مبيعات</button>
+        <button class="btn" onclick="exportCSV('purchases','المشتريات')">📄 مشتريات</button>
+        <button class="btn" onclick="exportCSV('finance','القيود المالية')">📄 مالية</button>
+        <button class="btn" onclick="exportCSV('journal','القيود اليومية')">📄 قيود</button>
+      </div>
+    </section>
+
+    <section class="page" id="page-backup">
+      <div class="panel"><h2>💾 النسخ الاحتياطي</h2>
+        <p style="color:var(--muted);margin:0 0 14px">نزّل نسخة كاملة من البيانات (مبيعات، مشتريات، قيود، أصناف، مستخدمين) واسترجعها وقت ما تحتاج.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <button class="btn primary" onclick="downloadBackup()">⬇️ تنزيل نسخة احتياطية</button>
+          <label class="btn">⬆️ استرجاع من ملف<input type="file" id="restore-file" accept="application/json" style="display:none" onchange="restoreBackup(this)"></label>
+          <span id="backup-info" style="color:var(--muted);font-size:13px"></span>
+        </div>
+      </div>
+      <div class="panel"><h2>حالة قاعدة البيانات</h2><div id="db-info"></div></div>
+    </section>
+
+    <section class="page" id="page-tutorials">
+      <div class="panel">
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
+          <input class="input" id="tv-q" placeholder="ابحث بالاسم أو الصفحة أو الرقم..." style="max-width:340px">
+          <div style="flex:1"></div>
+          <button class="btn" id="tv-trash" onclick="tvToggleTrash()">🗑️ سلة المحذوفات</button>
+          <span class="badge" id="tv-count"></span>
+          <button class="btn primary" onclick="tvOpenForm()">+ إضافة فيديو</button>
+        </div>
+        <div id="tv-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px"></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-data-tools">
+      <div class="panel">
+        <h2>🗄️ تفريغ الجداول</h2>
+        <p style="color:var(--muted);margin:0 0 12px">حذف كل صفوف الجداول المحددة. تُعطَّل قيود العلاقات مؤقتًا لإتمام العملية، ويُسجَّل الإجراء في سجل التدقيق. خذ نسخة احتياطية أولًا.</p>
+        <div id="dt-tables" style="max-height:360px;overflow:auto"></div>
+        <div style="display:flex;gap:10px;align-items:center;margin-top:12px">
+          <span id="dt-sel" style="color:var(--muted);font-size:13px">لم يتم تحديد أي جدول</span>
+          <div style="flex:1"></div>
+          <button class="btn danger" id="dt-truncate" disabled onclick="truncateTables()">🗑️ تفريغ المحدد</button>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>♻️ سلة المحذوفات</h2>
+        <div id="dt-trash"></div>
+      </div>
+      <div class="panel">
+        <h2>🕵️ سجل التدقيق</h2>
+        <div id="dt-audit" style="max-height:320px;overflow:auto"></div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+<script>(function(){var b=document.getElementById('toggle-login-pass'),i=document.getElementById('login-pass');if(b&&i){b.onclick=function(){var s=i.type==='password';i.type=s?'text':'password';b.textContent=s?'🙈':'👁';};}})();</script>
+</body>
+</html>

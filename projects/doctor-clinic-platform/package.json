@@ -1,0 +1,39 @@
+{
+  "name": "tabib-clinic-platform",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "description": "منصة طبيب — نظام احترافي متكامل لإدارة العيادة الطبية",
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --watch server/index.mjs",
+    "dev:client": "vite",
+    "server": "node server/index.mjs",
+    "start": "node server/index.mjs",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "seed:demo": "node scripts/generate-demo-seed.mjs",
+    "cloud:bootstrap": "node scripts/create-cloud-users.mjs",
+    "cloud:check": "node scripts/check-cloud.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "express": "^5.3.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
+    "lucide-react": "^0.451.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "sql.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@types/sql.js": "^1.4.11",
+    "@vitejs/plugin-react": "^4.3.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9"
+  }
+}

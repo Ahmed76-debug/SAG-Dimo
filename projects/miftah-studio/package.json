@@ -1,0 +1,82 @@
+{
+  "name": "miftah-studio",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Miftah Studio — استوديو التراخيص الاحترافي لتطبيقات الديسكتوب",
+  "author": "Miftah Studio",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,magenta \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node --watch server/index.mjs",
+    "dev:web": "vite",
+    "build": "tsc -b && vite build",
+    "start": "node server/index.mjs",
+    "preview": "vite preview",
+    "electron:dev": "electron .",
+    "dist:exe": "npm run build && electron-builder --win portable",
+    "dist:installer": "npm run build && electron-builder --win nsis"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "framer-motion": "^14.14.0",
+    "lucide-react": "^0.544.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@fontsource/ibm-plex-sans-arabic": "^5.2.6",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.7.2",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "electron": "^45.3.2",
+    "electron-builder": "^26.18.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.9"
+  },
+  "build": {
+    "appId": "app.miftah.studio",
+    "productName": "Miftah Studio",
+    "artifactName": "Miftah-Studio-${version}-${arch}.${ext}",
+    "directories": {
+      "output": "release",
+      "buildResources": "public"
+    },
+    "files": [
+      "electron/**/*",
+      "server/**/*",
+      "dist/**/*",
+      "public/**/*",
+      "package.json",
+      "node_modules/**/*",
+      "!**/*.map",
+      "!release/**",
+      "!docs/**",
+      "!scripts/**",
+      "!data/**",
+      "!keys/**",
+      "!backups/**"
+    ],
+    "asar": false,
+    "win": {
+      "icon": "public/miftah.ico",
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}

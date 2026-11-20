@@ -1,0 +1,8 @@
+
+> muraqib-financial-platform@1.0.0 build
+> tsc -b && vite build
+
+src/pages/external/ExternalEntryPage.tsx(2,10): error TS6133: 'UserPlus' is declared but its value is never read.
+src/pages/reports/BalanceSheetPage.tsx(2,10): error TS6133: 'BarChart3' is declared but its value is never read.
+src/pages/reports/IncomeStatementPage.tsx(2,10): error TS6133: 'BarChart3' is declared but its value is never read.
+src/pages/reports/TrialBalancePage.tsx(2,10): error TS6133: 'Scale' is declared but its value is never read.

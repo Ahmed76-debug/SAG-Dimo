@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" fill="none">
+  <defs>
+    <radialGradient id="lamp" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff8e1" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fff8e1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="suvBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".45" stop-color="#eef3fa"/>
+      <stop offset="1" stop-color="#bcc9da"/>
+    </linearGradient>
+    <linearGradient id="suvPillar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7fafd"/>
+      <stop offset="1" stop-color="#cdd8e6"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a6382"/>
+      <stop offset=".5" stop-color="#22314a"/>
+      <stop offset="1" stop-color="#0c1422"/>
+    </linearGradient>
+    <linearGradient id="coupeBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff7d92"/>
+      <stop offset=".42" stop-color="#ee2049"/>
+      <stop offset="1" stop-color="#9d1234"/>
+    </linearGradient>
+    <linearGradient id="coupePillar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4587a"/>
+      <stop offset="1" stop-color="#b0163a"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef3fa"/>
+      <stop offset="1" stop-color="#aab8ca"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- ===== جنط ===== -->
+    <g id="wheel">
+      <circle r="26" fill="#0a0d13"/>
+      <circle r="26" fill="none" stroke="#232a35" stroke-width="2.5"/>
+      <circle r="16" fill="url(#rim)"/>
+      <circle r="16" fill="none" stroke="#93a1b3" stroke-width="1.4"/>
+      <g stroke="#7e8b9c" stroke-width="3.6" stroke-linecap="round">
+        <line x1="0" y1="-1" x2="0" y2="-14"/>
+        <line x1="0" y1="-1" x2="0" y2="-14" transform="rotate(72)"/>
+        <line x1="0" y1="-1" x2="0" y2="-14" transform="rotate(144)"/>
+        <line x1="0" y1="-1" x2="0" y2="-14" transform="rotate(216)"/>
+        <line x1="0" y1="-1" x2="0" y2="-14" transform="rotate(288)"/>
+      </g>
+      <circle r="4.6" fill="#5b6675"/>
+      <circle r="1.8" fill="#9aa6b5"/>
+    </g>
+
+    <!-- ===== سيارة دفع رباعي فاخرة ===== -->
+    <g id="car-suv">
+      <ellipse cx="182" cy="152" rx="178" ry="9" fill="#000" opacity=".3"/>
+      <path d="M62 88 L100 46 Q106 42 116 42 L220 42 Q232 42 240 50 L280 88 Z" fill="url(#glass)"/>
+      <path d="M104 48 L128 48 L96 84 L74 84 Z" fill="#ffffff" opacity=".10"/>
+      <path d="M214 48 L236 50 L272 84 L246 84 Z" fill="#ffffff" opacity=".06"/>
+      <path d="M26 90 L336 90 Q350 90 350 106 L350 138 Q350 150 336 150 L28 150 Q14 150 14 138 L14 106 Q14 90 26 90 Z" fill="url(#suvBody)"/>
+      <path d="M26 90 L336 90 Q350 90 350 106 L350 112 L14 112 L14 106 Q14 90 26 90 Z" fill="#ffffff" opacity=".35"/>
+      <path d="M14 132 L350 132 L350 138 Q350 150 336 150 L28 150 Q14 150 14 138 Z" fill="#0b1424" opacity=".16"/>
+      <path d="M100 46 Q106 42 116 42 L220 42 Q232 42 240 50" stroke="url(#suvPillar)" stroke-width="9" stroke-linecap="round"/>
+      <line x1="238" y1="48" x2="282" y2="88" stroke="url(#suvPillar)" stroke-width="8" stroke-linecap="round"/>
+      <line x1="102" y1="46" x2="60" y2="88" stroke="url(#suvPillar)" stroke-width="9" stroke-linecap="round"/>
+      <line x1="170" y1="42" x2="170" y2="88" stroke="url(#suvPillar)" stroke-width="7"/>
+      <line x1="220" y1="42" x2="224" y2="88" stroke="url(#suvPillar)" stroke-width="7"/>
+      <path d="M34 90 L332 90" stroke="#ffffff" stroke-opacity=".7" stroke-width="2"/>
+      <path d="M40 120 Q186 112 344 118" stroke="#0b1424" stroke-opacity=".12" stroke-width="2.5"/>
+      <path d="M170 92 L170 146 M224 92 L224 146" stroke="#0b1424" stroke-opacity=".14" stroke-width="2"/>
+      <rect x="176" y="100" width="17" height="5" rx="2.5" fill="#8b98a9"/>
+      <rect x="230" y="100" width="17" height="5" rx="2.5" fill="#8b98a9"/>
+      <path d="M266 90 L288 88 Q296 88 296 95 L296 99 Q296 104 288 104 L266 102 Z" fill="#c3cedd"/>
+      <path d="M328 96 Q342 94 348 100 L348 108 Q338 107 328 105 Z" fill="#fff3c4"/>
+      <circle cx="352" cy="102" r="26" fill="url(#lamp)" opacity=".5"/>
+      <rect x="14" y="94" width="10" height="18" rx="3" fill="#e11d48"/>
+      <rect x="14" y="94" width="4" height="18" rx="2" fill="#ff8fa3" opacity=".8"/>
+      <path d="M52 150 A30 30 0 0 1 112 150 Z" fill="#0a0f18" opacity=".45"/>
+      <path d="M258 150 A30 30 0 0 1 318 150 Z" fill="#0a0f18" opacity=".45"/>
+      <use href="#wheel" transform="translate(82,124)"/>
+      <use href="#wheel" transform="translate(288,124)"/>
+      <path d="M50 100 A34 34 0 0 1 114 100" stroke="#ffffff" stroke-opacity=".6" stroke-width="2.5"/>
+      <path d="M256 100 A34 34 0 0 1 320 100" stroke="#ffffff" stroke-opacity=".6" stroke-width="2.5"/>
+      <path d="M40 96 L200 96 L120 132 L40 132 Z" fill="url(#shine)" opacity=".5"/>
+    </g>
+
+    <!-- ===== كوبيه رياضية ===== -->
+    <g id="car-coupe">
+      <ellipse cx="184" cy="152" rx="180" ry="9" fill="#000" opacity=".3"/>
+      <path d="M78 96 L140 50 Q146 44 156 44 L204 44 Q216 44 224 52 L270 96 Z" fill="url(#glass)"/>
+      <path d="M150 48 L172 48 L138 92 L112 92 Z" fill="#ffffff" opacity=".10"/>
+      <path d="M34 98 L336 98 Q350 100 350 114 L350 138 Q350 150 336 150 L20 150 Q18 150 18 146 L18 112 Q18 100 34 98 Z" fill="url(#coupeBody)"/>
+      <path d="M34 98 L336 98 Q350 100 350 114 L350 118 L18 118 L18 112 Q18 100 34 98 Z" fill="#ffffff" opacity=".3"/>
+      <path d="M18 134 L350 134 L350 138 Q350 150 336 150 L20 150 Q18 150 18 146 Z" fill="#0b1424" opacity=".18"/>
+      <path d="M140 50 Q146 44 156 44 L204 44 Q216 44 224 52" stroke="url(#coupePillar)" stroke-width="9" stroke-linecap="round"/>
+      <line x1="222" y1="48" x2="270" y2="96" stroke="url(#coupePillar)" stroke-width="8" stroke-linecap="round"/>
+      <line x1="140" y1="48" x2="78" y2="96" stroke="url(#coupePillar)" stroke-width="9" stroke-linecap="round"/>
+      <path d="M36 98 L334 98" stroke="#ffffff" stroke-opacity=".55" stroke-width="2"/>
+      <path d="M40 124 Q186 114 344 124" stroke="#0b1424" stroke-opacity=".16" stroke-width="2.5"/>
+      <path d="M214 100 L214 146" stroke="#0b1424" stroke-opacity=".2" stroke-width="2"/>
+      <rect x="222" y="108" width="17" height="5" rx="2.5" fill="#7a1029"/>
+      <path d="M18 96 L54 93 L54 99 L18 102 Z" fill="#8f1030"/>
+      <path d="M256 96 L278 94 Q286 94 286 101 L286 105 Q286 110 278 110 L256 108 Z" fill="#c4173f"/>
+      <path d="M328 104 Q342 102 348 108 L348 114 Q338 113 328 111 Z" fill="#fff3c4"/>
+      <circle cx="352" cy="110" r="24" fill="url(#lamp)" opacity=".45"/>
+      <path d="M18 104 L34 104 L34 112 L18 112 Z" fill="#ef4444"/>
+      <path d="M18 107 L30 107 L30 109 L18 109 Z" fill="#ffb4c0" opacity=".9"/>
+      <path d="M56 150 A30 30 0 0 1 116 150 Z" fill="#0a0f18" opacity=".45"/>
+      <path d="M258 150 A30 30 0 0 1 318 150 Z" fill="#0a0f18" opacity=".45"/>
+      <use href="#wheel" transform="translate(86,124)"/>
+      <use href="#wheel" transform="translate(288,124)"/>
+      <path d="M54 100 A34 34 0 0 1 118 100" stroke="#ffffff" stroke-opacity=".5" stroke-width="2.5"/>
+      <path d="M256 100 A34 34 0 0 1 320 100" stroke="#ffffff" stroke-opacity=".5" stroke-width="2.5"/>
+      <path d="M44 104 L210 104 L130 138 L44 138 Z" fill="url(#shine)" opacity=".45"/>
+    </g>
+  </defs>
+
+  <!-- ===== السيارات ===== -->
+  <!-- انعكاس على الأرضية -->
+  <use href="#car-suv" transform="translate(70,812.5) scale(1.15,-1.15)" opacity=".08"/>
+  <use href="#car-coupe" transform="translate(660,797.5) scale(1.05,-1.05)" opacity=".08"/>
+
+  <use href="#car-suv" transform="translate(70,467.5) scale(1.15)"/>
+  <use href="#car-coupe" transform="translate(660,482.5) scale(1.05)"/>
+</svg>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسوق | بيع وشراء السيارات والمنازل والأراضي</title>
+  <meta name="description" content="موقع مبوبات لبيع وشراء السيارات والعقارات والأراضي مع نظام عمولة وحماية للمشتري والبائع">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script>(function(){try{var t=localStorage.getItem('ts_theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark">🏠</span>
+        <span class="logo-text">تسوق</span>
+      </a>
+      <nav class="nav">
+        <a href="/" class="nav-link active"><i class="bi bi-house-door"></i> الرئيسية</a>
+        <a href="/listings.html?type=cars" class="nav-link"><i class="bi bi-car-front"></i> سيارات</a>
+        <a href="/listings.html?type=real_estate" class="nav-link"><i class="bi bi-building"></i> عقارات</a>
+        <a href="/listings.html?type=lands" class="nav-link"><i class="bi bi-map"></i> أراضي</a>
+        <a href="/listings.html" class="nav-link"><i class="bi bi-grid-3x3-gap"></i> كل الإعلانات</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-icon" id="themeToggle" title="تبديل الوضع الليلي/النهاري"><i class="bi bi-moon-stars"></i></button>
+        <a href="/add-listing.html" class="btn btn-primary"><i class="bi bi-plus-lg"></i> أضف إعلان</a>
+        <div class="user-menu" id="userMenu" style="display:none">
+          <button class="btn btn-ghost"><i class="bi bi-person-circle"></i> <span id="userName">حسابي</span> <i class="bi bi-chevron-down"></i></button>
+          <div class="dropdown">
+            <a href="/dashboard.html"><i class="bi bi-speedometer2"></i> لوحة التحكم</a>
+            <a href="/my-listings.html"><i class="bi bi-card-list"></i> إعلاناتي</a>
+            <a href="/messages.html"><i class="bi bi-chat-dots"></i> الرسائل</a>
+            <a href="/favorites.html"><i class="bi bi-heart"></i> المفضلة</a>
+            <a href="/admin.html" id="adminLink" style="display:none"><i class="bi bi-shield-lock"></i> لوحة الإدارة</a>
+            <a href="#" id="logoutBtn"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a>
+          </div>
+        </div>
+        <a href="/login.html" class="btn btn-ghost" id="loginBtn"><i class="bi bi-box-arrow-in-right"></i> دخول / تسجيل</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+    <div class="container hero-inner">
+      <span class="hero-eyebrow"><i class="bi bi-patch-check-fill"></i> السوق الموثوق للسيارات والعقارات والأراضي</span>
+      <h1 class="hero-title">
+        بيع واشتري<br>
+        <span class="gradient-text">بكل ثقة وسهولة</span>
+      </h1>
+      <p class="hero-subtitle">
+        آلاف الإعلانات الموثقة للسيارات والمنازل والأراضي في مكان واحد —
+        أضف إعلانك مجانًا وتواصل مباشرة مع المشترين.
+      </p>
+
+      <div class="search-box">
+        <div class="search-field">
+          <i class="bi bi-search"></i>
+          <input type="text" id="searchInput" placeholder="ابحث عن سيارة، شقة، أرض...">
+        </div>
+        <div class="search-sep"></div>
+        <select id="typeFilter" class="search-select">
+          <option value="">كل الأقسام</option>
+          <option value="cars">🚗 سيارات</option>
+          <option value="real_estate">🏠 عقارات</option>
+          <option value="lands">🌍 أراضي</option>
+        </select>
+        <div class="search-sep"></div>
+        <input type="text" id="cityFilter" class="search-input" placeholder="المحافظة / المدينة">
+        <button class="btn btn-primary btn-search" id="searchBtn"><i class="bi bi-search"></i> ابحث</button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="statListings">—</span>
+          <span class="stat-label">إعلان متاح</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" id="statUsers">—</span>
+          <span class="stat-label">مستخدم مسجل</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">أقسام رئيسية</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">0 <small>ج.م</small></span>
+          <span class="stat-label">تكلفة نشر الإعلان</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-eyebrow">تصفح الأقسام</span>
+        <h2 class="section-title">ماذا تبحث عنه اليوم؟</h2>
+        <p class="section-subtitle">اختر القسم المناسب وابدأ رحلة البحث</p>
+      </div>
+      <div class="categories-grid">
+        <a href="/listings.html?type=cars" class="category-card cat-cars">
+          <div class="cat-glow"></div>
+          <div class="category-icon">🚗</div>
+          <div class="cat-body">
+            <h3>سيارات</h3>
+            <p>بيع وشراء السيارات الجديدة والمستعملة</p>
+            <span class="cat-count" data-count="cars">— إعلان</span>
+          </div>
+          <span class="category-arrow"><i class="bi bi-arrow-left"></i></span>
+        </a>
+        <a href="/listings.html?type=real_estate" class="category-card cat-real">
+          <div class="cat-glow"></div>
+          <div class="category-icon">🏠</div>
+          <div class="cat-body">
+            <h3>عقارات</h3>
+            <p>شقق، فلل، محلات ومكاتب إدارية</p>
+            <span class="cat-count" data-count="real_estate">— إعلان</span>
+          </div>
+          <span class="category-arrow"><i class="bi bi-arrow-left"></i></span>
+        </a>
+        <a href="/listings.html?type=lands" class="category-card cat-lands">
+          <div class="cat-glow"></div>
+          <div class="category-icon">🌍</div>
+          <div class="cat-body">
+            <h3>أراضي</h3>
+            <p>أراضي زراعية، سكنية وتجارية</p>
+            <span class="cat-count" data-count="lands">— إعلان</span>
+          </div>
+          <span class="category-arrow"><i class="bi bi-arrow-left"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="section section-featured">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">إعلانات مميزة</span>
+          <h2 class="section-title">الأكثر تميزًا هذا الأسبوع</h2>
+        </div>
+        <a href="/listings.html" class="btn btn-ghost">عرض الكل <i class="bi bi-arrow-left"></i></a>
+      </div>
+      <div class="listings-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- LATEST -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">وصل حديثًا</span>
+          <h2 class="section-title">أحدث الإعلانات</h2>
+        </div>
+        <a href="/listings.html" class="btn btn-ghost">عرض الكل <i class="bi bi-arrow-left"></i></a>
+      </div>
+      <div class="listings-grid" id="listingsGrid"></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-eyebrow">كيف يعمل الموقع</span>
+        <h2 class="section-title">ثلاث خطوات فقط</h2>
+        <p class="section-subtitle">من الفكرة إلى الصفقة بأسهل طريقة ممكنة</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-no">01</span>
+          <div class="step-icon"><i class="bi bi-person-plus"></i></div>
+          <h3>أنشئ حسابك</h3>
+          <p>سجّل مجانًا في ثوانٍ برقم هاتفك وابدأ رحلتك في السوق.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-no">02</span>
+          <div class="step-icon"><i class="bi bi-megaphone"></i></div>
+          <h3>أضف إعلانك</h3>
+          <p>ارفع صور سيارتك أو عقارك مع التفاصيل والسعر، وسنراجعه فورًا.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-no">03</span>
+          <div class="step-icon"><i class="bi bi-hand-thumbs-up"></i></div>
+          <h3>أتمم الصفقة</h3>
+          <p>تواصل مع المشتري، اتفق على السعر، وأتمم بيعك بأمان.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-eyebrow">لماذا تسوق</span>
+        <h2 class="section-title">ميزات تجعل الفرق</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+          <h3>إعلانات مراجعة</h3>
+          <p>كل إعلان يمر على فريق المراجعة لضمان المصداقية ومنع الاحتيال.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-chat-dots"></i></div>
+          <h3>تواصل مباشر</h3>
+          <p>اتصال، واتساب، أو رسائل داخل الموقع — بدون وسطاء.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-percent"></i></div>
+          <h3>عمولة واضحة</h3>
+          <p>نسبة عمولة معلنة وشفافة تُحتسب فقط عند إتمام الصفقة.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-phone"></i></div>
+          <h3>يعمل على كل الأجهزة</h3>
+          <p>تصميم متجاوب وسريع على الهاتف والتابلت والكمبيوتر.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-images"></i></div>
+          <h3>صور وفيديوهات</h3>
+          <p>اعرض ممتلكاتك بأفضل صورة مع معرض صور احترافي.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3>إحصائيات فورية</h3>
+          <p>تابع مشاهدات إعلانك واهتمام المشترين لحظة بلحظة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMISSION -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="commission-card">
+        <div class="commission-copy">
+          <span class="section-eyebrow">نظام العمولة</span>
+          <h2>عمولة عادلة وشفافة</h2>
+          <p>
+            لا نأخذ أي مبالغ مقدمًا. تُحتسب عمولة الموقع بنسبة
+            <strong id="commissionPct">2%</strong>
+            من قيمة الصفقة فقط عند إتمامها بنجاح بين البائع والمشتري.
+          </p>
+          <ul class="check-list">
+            <li><i class="bi bi-check-circle-fill"></i> نشر الإعلان مجاني بالكامل</li>
+            <li><i class="bi bi-check-circle-fill"></i> لا رسوم شهرية أو اشتراكات</li>
+            <li><i class="bi bi-check-circle-fill"></i> العمولة تُحسب بعد إتمام البيع</li>
+          </ul>
+        </div>
+        <div class="commission-calc">
+          <h3>احسب عمولتك</h3>
+          <label class="calc-label">قيمة الصفقة (ج.م)</label>
+          <input type="number" id="calcAmount" class="calc-input" value="1000000" min="0">
+          <div class="calc-row">
+            <span>نسبة العمولة</span>
+            <strong id="calcPct">2%</strong>
+          </div>
+          <div class="calc-row calc-total">
+            <span>العمولة المستحقة</span>
+            <strong id="calcResult">20,000 ج.م</strong>
+          </div>
+          <div class="calc-row calc-net">
+            <span>صافي المبلغ للبائع</span>
+            <strong id="calcNet">980,000 ج.م</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-orb"></div>
+        <h2>هل لديك شيء للبيع؟</h2>
+        <p>أضف إعلانك الآن مجانًا ووصل إلى آلاف المشترين الجادين</p>
+        <div class="cta-actions">
+          <a href="/add-listing.html" class="btn btn-white btn-lg"><i class="bi bi-plus-lg"></i> أضف إعلانك مجانًا</a>
+          <a href="/listings.html" class="btn btn-glass btn-lg"><i class="bi bi-compass"></i> تصفح الإعلانات</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><span class="logo-mark">🏠</span><span class="logo-text">تسوق</span></a>
+          <p>منصة مبوبات عربية لبيع وشراء السيارات والمنازل والأراضي بثقة وسهولة.</p>
+          <div class="social-row">
+            <a href="#" aria-label="فيسبوك"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="انستجرام"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="تويتر"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="واتساب"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>الأقسام</h4>
+          <ul>
+            <li><a href="/listings.html?type=cars">سيارات</a></li>
+            <li><a href="/listings.html?type=real_estate">عقارات</a></li>
+            <li><a href="/listings.html?type=lands">أراضي</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>حسابي</h4>
+          <ul>
+            <li><a href="/add-listing.html">أضف إعلان</a></li>
+            <li><a href="/my-listings.html">إعلاناتي</a></li>
+            <li><a href="/favorites.html">المفضلة</a></li>
+            <li><a href="/messages.html">الرسائل</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>معلومات</h4>
+          <ul>
+            <li><a href="/page.html?slug=about">من نحن</a></li>
+            <li><a href="/page.html?slug=terms">شروط الاستخدام</a></li>
+            <li><a href="/page.html?slug=privacy">سياسة الخصوصية</a></li>
+            <li><a href="/admin.html">لوحة الإدارة</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 تسوق — جميع الحقوق محفوظة</p>
+        <p class="footer-made">صُنع بعناية <i class="bi bi-heart-fill"></i> في مصر</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
+

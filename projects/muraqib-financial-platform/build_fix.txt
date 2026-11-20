@@ -1,0 +1,5 @@
+
+> muraqib-financial-platform@1.0.0 build
+> tsc -b && vite build
+
+src/pages/review/ReviewApprovalPage.tsx(2,24): error TS6133: 'FileText' is declared but its value is never read.

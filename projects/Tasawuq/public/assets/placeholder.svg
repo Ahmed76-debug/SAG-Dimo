@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="0.5" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)" opacity="0.12"/>
+  <rect width="800" height="500" fill="#0f172a" opacity="0.03"/>
+  <g fill="#6366f1" opacity="0.45">
+    <circle cx="400" cy="215" r="58" fill="none" stroke="#6366f1" stroke-width="6"/>
+    <path d="M300 330 L355 250 L400 300 L450 235 L520 330 Z" fill="none" stroke="#6366f1" stroke-width="6" stroke-linejoin="round"/>
+    <circle cx="455" cy="185" r="18"/>
+  </g>
+  <text x="400" y="400" text-anchor="middle" font-family="Tahoma, Arial" font-size="26" fill="#6366f1" opacity="0.75">تسوق v2.1</text>
+</svg>

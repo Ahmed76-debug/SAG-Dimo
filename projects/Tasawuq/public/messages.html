@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الرسائل - تسوق</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/user-pages.css">
+  <script>(function(){try{var t=localStorage.getItem('ts_theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><span class="logo-mark">🏠</span><span class="logo-text">تسوق </span></a>
+      <nav class="nav"><a href="/" class="nav-link"><i class="bi bi-house-door"></i> الرئيسية</a><a href="/listings.html" class="nav-link"><i class="bi bi-grid-3x3-gap"></i> الإعلانات</a></nav>
+      <div class="header-actions">
+        <button class="btn-icon" id="themeToggle"><i class="bi bi-moon-stars"></i></button>
+        <a href="/add-listing.html" class="btn btn-primary"><i class="bi bi-plus-lg"></i> أضف إعلان</a>
+        <div class="user-menu" id="userMenu" style="display:none">
+          <button class="btn btn-ghost"><i class="bi bi-person-circle"></i> <span id="userName">حسابي</span> <i class="bi bi-chevron-down"></i></button>
+          <div class="dropdown">
+            <a href="/dashboard.html"><i class="bi bi-speedometer2"></i> لوحة التحكم</a>
+            <a href="/my-listings.html"><i class="bi bi-card-list"></i> إعلاناتي</a>
+            <a href="/favorites.html"><i class="bi bi-heart"></i> المفضلة</a>
+            <a href="/messages.html"><i class="bi bi-chat-dots"></i> الرسائل</a>
+            <a href="#" id="logoutBtn"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="user-wrap">
+    <div class="container">
+      <div class="user-page-head">
+        <div>
+          <h1><i class="bi bi-chat-dots"></i> الرسائل</h1>
+          <p style="color:var(--text-2)">تواصل مع البائعين والمشترين مباشرة</p>
+        </div>
+        <span class="mini-stat" style="padding:.5rem 1rem"><span id="unreadCount">0</span> رسالة غير مقروءة</span>
+      </div>
+      <div id="msgWrap"></div>
+    </div>
+  </main>
+
+  <footer class="footer" style="margin-top:2rem">
+    <div class="container"><div class="footer-bottom" style="border-top:none"><p>© 2026 تسوق — جميع الحقوق محفوظة</p></div></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    if(!token) location.href='/login.html?next=/messages.html';
+    let msgs = [], activeId = null;
+
+    function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;' }[m]));}
+    const nf = n => Number(n||0).toLocaleString('ar-EG');
+
+    async function load(){
+      const wrap = document.getElementById('msgWrap');
+      wrap.innerHTML = '<div style="text-align:center;padding:3rem"><div class="spinner"></div></div>';
+      try{
+        const res = await fetch('/api/messages',{headers:{'Authorization':'Bearer '+token}});
+        const d = await res.json();
+        msgs = d.rows || [];
+        const unread = msgs.filter(m=>!m.read).length;
+        document.getElementById('unreadCount').textContent = nf(unread);
+        if(!msgs.length){
+          wrap.innerHTML = `<div class="empty-box"><div class="ic">📩</div><h3>لا توجد رسائل بعد</h3><p>عندما يراسلك أحد بخصوص إعلاناتك ستظهر رسالته هنا</p><a href="/listings.html" class="btn btn-primary">تصفح الإعلانات</a></div>`;
+          return;
+        }
+        wrap.innerHTML = `
+          <div class="msg-layout">
+            <div class="msg-list" id="msgList">
+              ${msgs.map(m=>`
+                <div class="msg-item ${m.read?'':'unread'}" data-id="${m.id}" onclick="openMsg(${m.id})">
+                  <div class="msg-item-name"><i class="bi bi-person-circle"></i> ${esc(m.from_name)}</div>
+                  <div class="msg-item-text">${esc((m.message||'').slice(0,60))}</div>
+                  <div class="msg-item-time">${new Date(m.created_at).toLocaleString('ar-EG')}</div>
+                </div>`).join('')}
+            </div>
+            <div class="msg-detail" id="msgDetail">
+              <div class="empty-box" style="padding:2.5rem;border:none;background:transparent">
+                <div class="ic">👈</div><p>اختر رسالة من القائمة لعرضها والرد عليها</p>
+              </div>
+            </div>
+          </div>`;
+        // auto-open first
+        openMsg(msgs[0].id);
+      }catch(e){
+        wrap.innerHTML = '<div class="empty-box"><h3>تعذر تحميل الرسائل</h3></div>';
+      }
+    }
+
+    window.openMsg = async function(id){
+      const m = msgs.find(x=>x.id===id);
+      if(!m) return;
+      activeId = id;
+      document.querySelectorAll('.msg-item').forEach(el=>el.classList.toggle('active', Number(el.dataset.id)===id));
+      const detail = document.getElementById('msgDetail');
+      detail.innerHTML = `
+        <div class="msg-detail-head" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div>
+            <strong style="font-size:1.05rem">${esc(m.from_name)}</strong>
+            <div style="color:var(--text-2);font-size:.85rem">${new Date(m.created_at).toLocaleString('ar-EG')}</div>
+          </div>
+          ${m.listing_id?`<a href="/listing.html?id=${m.listing_id}" class="btn btn-ghost btn-sm"><i class="bi bi-eye"></i> عرض الإعلان</a>`:''}
+        </div>
+        <div class="msg-bubble">${esc(m.message)}</div>
+        <div class="reply-box">
+          <label class="form-label" style="margin-bottom:.5rem">الرد على ${esc(m.from_name)}</label>
+          <textarea id="replyText" class="form-textarea" rows="3" placeholder="اكتب ردك هنا..."></textarea>
+          <button class="btn btn-primary" id="replyBtn" style="align-self:flex-start;margin-top:.75rem"><i class="bi bi-send"></i> إرسال الرد</button>
+        </div>`;
+      document.getElementById('replyBtn').addEventListener('click', ()=>sendReply(m));
+      // mark read
+      if(!m.read){
+        m.read = 1;
+        const item = document.querySelector('.msg-item[data-id="'+id+'"]');
+        item?.classList.remove('unread');
+        document.getElementById('unreadCount').textContent = nf(msgs.filter(x=>!x.read).length);
+        try{ await fetch('/api/messages/'+id+'/read',{method:'POST',headers:{'Authorization':'Bearer '+token}}); }catch(e){}
+      }
+    };
+
+    async function sendReply(m){
+      const ta = document.getElementById('replyText');
+      const text = ta.value.trim();
+      if(!text) return;
+      const btn = document.getElementById('replyBtn');
+      btn.disabled = true;
+      try{
+        const res = await fetch('/api/messages/send',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({to_user:m.from_user, listing_id:m.listing_id, message:text})});
+        if(res.ok){
+          ta.value='';
+          const bubble = document.createElement('div');
+          bubble.className='msg-bubble';
+          bubble.style.cssText='background:var(--primary-glow);color:var(--primary);align-self:flex-start;margin-right:auto;max-width:85%';
+          bubble.textContent = text;
+          document.querySelector('.msg-bubble').after(bubble);
+          btn.innerHTML = '<i class="bi bi-check2"></i> تم الإرسال';
+          setTimeout(()=>{ btn.disabled=false; btn.innerHTML='<i class="bi bi-send"></i> إرسال الرد'; }, 1500);
+        } else { btn.disabled=false; }
+      }catch(e){ btn.disabled=false; }
+    }
+
+    const style = document.createElement('style');
+    style.textContent = `.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto}@keyframes spin{to{transform:rotate(360deg)}} .msg-detail{overflow-y:auto;max-height:70vh} .reply-box{margin-top:auto;padding-top:1rem;border-top:1px solid var(--border);display:flex;flex-direction:column}`;
+    document.head.appendChild(style);
+
+    load();
+  </script>
+</body>
+</html>
+

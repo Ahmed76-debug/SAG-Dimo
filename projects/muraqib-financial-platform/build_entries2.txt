@@ -1,0 +1,6 @@
+
+> muraqib-financial-platform@1.0.0 build
+> tsc -b && vite build
+
+src/pages/entries/EntriesPage.tsx(37,9): error TS6133: 'allAccMap' is declared but its value is never read.
+src/pages/entries/EntriesPage.tsx(212,52): error TS2304: Cannot find name 'accMap'.

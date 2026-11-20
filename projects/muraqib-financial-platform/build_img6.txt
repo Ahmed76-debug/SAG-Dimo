@@ -1,0 +1,5 @@
+
+> muraqib-financial-platform@1.0.0 build
+> tsc -b && vite build
+
+src/pages/portfolio/PortfolioPage.tsx(129,10): error TS17008: JSX element 'div' has no corresponding closing tag.

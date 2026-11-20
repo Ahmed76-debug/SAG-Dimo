@@ -1,0 +1,6 @@
+سجّل دخول كمدير 
+
+
+User Name : admin
+
+Password : admin123

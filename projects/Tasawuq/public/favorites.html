@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المفضلة - تسوق</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/user-pages.css">
+  <script>(function(){try{var t=localStorage.getItem('ts_theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><span class="logo-mark">🏠</span><span class="logo-text">تسوق </span></a>
+      <nav class="nav"><a href="/" class="nav-link"><i class="bi bi-house-door"></i> الرئيسية</a><a href="/listings.html" class="nav-link"><i class="bi bi-grid-3x3-gap"></i> الإعلانات</a></nav>
+      <div class="header-actions">
+        <button class="btn-icon" id="themeToggle"><i class="bi bi-moon-stars"></i></button>
+        <a href="/add-listing.html" class="btn btn-primary"><i class="bi bi-plus-lg"></i> أضف إعلان</a>
+        <div class="user-menu" id="userMenu" style="display:none">
+          <button class="btn btn-ghost"><i class="bi bi-person-circle"></i> <span id="userName">حسابي</span> <i class="bi bi-chevron-down"></i></button>
+          <div class="dropdown">
+            <a href="/dashboard.html"><i class="bi bi-speedometer2"></i> لوحة التحكم</a>
+            <a href="/my-listings.html"><i class="bi bi-card-list"></i> إعلاناتي</a>
+            <a href="/favorites.html"><i class="bi bi-heart"></i> المفضلة</a>
+            <a href="/messages.html"><i class="bi bi-chat-dots"></i> الرسائل</a>
+            <a href="#" id="logoutBtn"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="user-wrap">
+    <div class="container">
+      <div class="user-page-head">
+        <div>
+          <h1><i class="bi bi-heart"></i> المفضلة</h1>
+          <p style="color:var(--text-2)">الإعلانات التي حفظتها للرجوع إليها لاحقًا</p>
+        </div>
+        <span class="mini-stat" style="padding:.5rem 1rem"><span id="favCount">0</span> إعلان محفوظ</span>
+      </div>
+      <div id="favWrap"></div>
+    </div>
+  </main>
+
+  <footer class="footer" style="margin-top:2rem">
+    <div class="container"><div class="footer-bottom" style="border-top:none"><p>© 2026 تسوق — جميع الحقوق محفوظة</p></div></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    if(!token) location.href='/login.html?next=/favorites.html';
+    function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;' }[m]));}
+    const nf = n => Number(n||0).toLocaleString('ar-EG');
+    const typeLabel = t => t==='cars'?'🚗 سيارة':t==='real_estate'?'🏠 عقار':'🌍 أرض';
+
+    async function load(){
+      const wrap = document.getElementById('favWrap');
+      wrap.innerHTML = '<div style="text-align:center;padding:3rem"><div class="spinner"></div></div>';
+      try{
+        const res = await fetch('/api/favorites',{headers:{'Authorization':'Bearer '+token}});
+        const d = await res.json();
+        const rows = d.rows || [];
+        document.getElementById('favCount').textContent = nf(rows.length);
+        if(!rows.length){
+          wrap.innerHTML = `<div class="empty-box"><div class="ic">💔</div><h3>لا توجد إعلانات في المفضلة</h3><p>اضغط على أيقونة القلب في أي إعلان لإضافته هنا</p><a href="/listings.html" class="btn btn-primary"><i class="bi bi-compass"></i> تصفح الإعلانات</a></div>`;
+          return;
+        }
+        wrap.innerHTML = `<div class="fav-grid">` + rows.map((l,i)=>`
+          <div class="listing-card" style="animation-delay:${i*0.04}s">
+            <div class="listing-img-wrap">
+              <a href="/listing.html?id=${l.id}">
+                <img src="${l.thumb||'assets/placeholder.svg'}" class="listing-img" alt="${esc(l.title)}" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+              </a>
+              <span class="listing-badge">${typeLabel(l.type)}</span>
+              <button class="listing-fav" onclick="removeFav(${l.id}, this)" style="color:#ef4444" title="إزالة من المفضلة"><i class="bi bi-heart-fill"></i></button>
+            </div>
+            <div class="listing-content">
+              <div class="listing-price">${nf(l.price)} ${l.currency||'ج.م'}</div>
+              <a href="/listing.html?id=${l.id}"><h3 class="listing-title">${esc(l.title)}</h3></a>
+              <div class="listing-meta">
+                <span><i class="bi bi-geo-alt"></i> ${esc(l.city||'-')}</span>
+                <span><i class="bi bi-eye"></i> ${nf(l.views)}</span>
+              </div>
+              <div class="listing-footer">
+                <span style="color:var(--text-2);font-size:.85rem">${esc(l.category_name||'')}</span>
+                <a href="/listing.html?id=${l.id}" style="color:var(--primary);font-weight:600;font-size:.9rem">التفاصيل <i class="bi bi-arrow-left"></i></a>
+              </div>
+            </div>
+          </div>
+        `).join('') + `</div>`;
+      }catch(e){
+        wrap.innerHTML = '<div class="empty-box"><h3>تعذر تحميل المفضلة</h3></div>';
+      }
+    }
+
+    window.removeFav = async function(id, btn){
+      const card = btn.closest('.listing-card');
+      try{
+        const res = await fetch('/api/favorites/toggle',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({listing_id:id})});
+        if(res.ok){
+          card.style.transition='opacity .25s, transform .25s';
+          card.style.opacity='0'; card.style.transform='scale(.95)';
+          setTimeout(()=>{ card.remove(); if(!document.querySelectorAll('.listing-card').length) load(); else document.getElementById('favCount').textContent = nf(document.querySelectorAll('.listing-card').length); }, 250);
+        }
+      }catch(e){}
+    };
+
+    const style = document.createElement('style');
+    style.textContent = `.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto}@keyframes spin{to{transform:rotate(360deg)}}`;
+    document.head.appendChild(style);
+
+    load();
+  </script>
+</body>
+</html>

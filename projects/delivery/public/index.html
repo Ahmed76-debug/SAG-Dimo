@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FF6B35">
+<title>طلباتك — متجر التوصيل</title>
+<!-- تطبيق الثيم قبل الرسم لمنع الوميض -->
+<script>
+(function(){try{var t=localStorage.getItem('tb_theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛵</text></svg>">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+
+<!-- ============ شاشة البداية ============ -->
+<div id="splash">
+  <span class="splash-emoji">🛵</span>
+  <img id="splash-logo" class="hidden" alt="">
+  <h1 id="splash-name">طلباتك</h1>
+  <p class="muted">توصيل سريع لباب بيتك… اطلب الآن</p>
+  <div class="dots"><i></i><i></i><i></i></div>
+</div>
+
+<!-- ============ الشريط العلوي ============ -->
+<header id="topbar">
+  <a class="brand" href="#/">
+    <span class="brand-emoji">🛵</span>
+    <img id="brand-logo" class="hidden" alt="شعار">
+    <span id="brand-name" class="brand-name-aldhabi"></span>
+  </a>
+  <nav class="top-nav" aria-label="القائمة الرئيسية">
+    <a href="#/"      data-b="home">الرئيسية</a>
+    <a href="#/cats"  data-b="cats">الأقسام</a>
+    <a href="#/orders" data-b="orders">طلباتي</a>
+    <a href="#/account" data-b="account">حسابي</a>
+  </nav>
+  <div class="top-actions">
+    <button class="btn btn-ghost btn-icon" id="theme-btn" data-act="theme" title="تبديل الوضع الليلي/النهاري" aria-label="تبديل الثيم">🌙</button>
+    <button class="btn btn-soft btn-icon hidden" id="notif-btn" data-act="notif-open" title="الإشعارات" aria-label="الإشعارات">🔔<span id="notif-count" class="badge badge-danger hidden">0</span></button>
+    <button class="btn btn-soft btn-icon" data-act="cart-open" title="الفاتورة" aria-label="فتح الفاتورة">🧾<span id="top-cart-count" class="badge badge-primary hidden">0</span></button>
+  </div>
+</header>
+
+<!-- ============ المحتوى (يملؤه الراوتر) ============ -->
+<main id="view"></main>
+
+<!-- ============ زر الفاتورة العائم ============ -->
+<button id="cart-fab" data-act="cart-open" aria-label="فتح الفاتورة">
+  <span class="fab-ic">🧺</span>
+  <span class="fab-meta">
+    <b id="fab-count">0</b>
+    <span id="fab-total" class="small">0.00 ج.م</span>
+  </span>
+</button>
+
+<!-- ============ التنقل السفلي (موبايل) ============ -->
+<nav id="bnav" aria-label="التنقل السفلي">
+  <a href="#/" data-b="home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
+    <span>الرئيسية</span>
+  </a>
+  <a href="#/cats" data-b="cats">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg>
+    <span>الأقسام</span>
+  </a>
+  <a href="#/orders" data-b="orders">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>
+    <span>طلباتي</span>
+  </a>
+  <a href="#/account" data-b="account">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+    <span>حسابي</span>
+  </a>
+</nav>
+
+<!-- ============ درج الفاتورة ============ -->
+<div id="cart-backdrop" data-act="cart-close"></div>
+<aside id="cart-drawer" aria-label="الفاتورة">
+  <div class="cart-head">
+    <h3>🧾 الفاتورة</h3>
+    <button class="btn btn-ghost btn-icon" data-act="cart-close" aria-label="إغلاق الفاتورة">✕</button>
+  </div>
+  <div id="cart-lines" class="cart-lines"></div>
+  <div class="cart-foot">
+    <div class="promo-row">
+      <input id="promo-input" class="input" placeholder="كود الخصم (مثال: EID15)" autocomplete="off">
+      <button class="btn btn-soft" data-act="promo-apply">تطبيق</button>
+    </div>
+    <div id="cart-promo-status" class="promo-status"></div>
+    <div id="cart-totals" class="totals"></div>
+    <button class="btn btn-primary btn-block" data-act="go-checkout">إتمام الطلب ←</button>
+  </div>
+</aside>
+
+<div id="toast-root"></div>
+<div id="modal-root"></div>
+
+<!-- ============ درج الإشعارات ============ -->
+<div id="notif-backdrop" class="drawer-backdrop hidden" data-act="notif-close"></div>
+<aside id="notif-drawer" class="hidden" aria-label="الإشعارات">
+  <div class="cart-head">
+    <h3>🔔 الإشعارات</h3>
+    <div class="flex">
+      <button class="btn btn-sm btn-ghost" data-act="notif-read-all">تعليم الكل كمقروء</button>
+      <button class="btn btn-ghost btn-icon" data-act="notif-close" aria-label="إغلاق الإشعارات">✕</button>
+    </div>
+  </div>
+  <div id="notif-lines" class="notif-lines"></div>
+</aside>
+
+<script src="js/store.js"></script>
+</body>
+</html>

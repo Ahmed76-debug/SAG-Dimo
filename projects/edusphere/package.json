@@ -1,0 +1,28 @@
+{
+  "name": "edusphere",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EduSphere — International School Management & ERP Platform (AR/EN, Web)",
+  "type": "module",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed": "node server/tools/seed.js",
+    "backup": "node server/tools/backup.js",
+    "test": "node server/tools/smoke.js"
+  },
+  "dependencies": {},
+  "keywords": [
+    "school",
+    "erp",
+    "education",
+    "international-school",
+    "sms",
+    "bilingual"
+  ],
+  "license": "UNLICENSED"
+}
